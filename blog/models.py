@@ -17,3 +17,14 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+
+
+class Comment(models.Model):
+    comment_id = models.AutoField(primary_key=True)
+    post_id = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
+    author_id = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    date_published = models.DateTimeField(auto_now_add=True)
