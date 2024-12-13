@@ -2,5 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(response):
-    return HttpResponse("Hello, home!")
+def index(request):
+    if request.method =="POST":
+        return HttpResponse("You must have posted something.")
+    else:
+        return HttpResponse(request.method)
