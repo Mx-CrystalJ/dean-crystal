@@ -61,23 +61,20 @@ def comment_edit(request, slug, comment_id):
     """
     view to edit comments
     """
-
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comment = get_object_or_404(Comment, pk=comment_id)
-
     if request.method == "POST":
+
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
-        if comment_form.is_valid() and comment.author_id == request.user:
+        if comment_form.is_valid() and comment.author_id == request.user_id:
             comment = comment_form.save(commit=False)
-            comment.post = post
+            comment.post_id = post
             comment.approved = False
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-            return redirect('post_detail.html', slug=post.slug)
         else:
-            comment_form = CommentForm(instance=comment)
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
@@ -91,7 +88,7 @@ def comment_delete(request, slug, comment_id):
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
-    if comment.author_id == request.user:
+    if comment.author_id == request.user_id:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
