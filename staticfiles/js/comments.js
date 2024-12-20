@@ -1,5 +1,5 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-console.log(editButtons);
+console.log('editButtons', editButtons)
 const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
@@ -21,13 +21,14 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 * - Sets the form's action attribute to the `edit_comment/{commentId}` endpoint.
 */
 for (let button of editButtons) {
+  console.log(button);
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("data-comment_id");
-    console.log('commentId', commentId)
+    console.log('commentId', commentId);
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_comment/${commentId}/`);
+    commentForm.setAttribute("action", `edit_comment/${commentId}`);
   });
 }
 

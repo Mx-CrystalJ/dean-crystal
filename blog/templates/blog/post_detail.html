@@ -60,7 +60,7 @@
                             {{ comment.date_published }}
                         </span> wrote:
                     </p>
-                    <div id="comment{{ comment.id }}">
+                    <div id="comment{{ comment.comment_id }}">
                         {{ comment.body | linebreaks }}
                     </div>
                     {% if not comment.approved and comment.author_id == user %}
@@ -69,8 +69,8 @@
                     </p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author_id == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.comment_id }}">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.comment_id }}">Edit</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
@@ -119,4 +119,5 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script>console.log('yo');</script>
 {% endblock %}
