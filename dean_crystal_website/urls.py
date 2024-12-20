@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home import views as index_views
-
+from services.views import service
+from contact.views import contact_me
 
 
 urlpatterns = [
@@ -25,6 +26,8 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path("blog/", include("blog.urls"), name="blog-urls"),
+    path("contact/", contact_me, name="contact"),
+    path("services/", service, name='services'),
     path('summernote/', include('django_summernote.urls')),
     path('', index_views.index, name='index'),
 ]
