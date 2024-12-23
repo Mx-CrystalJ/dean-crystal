@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog.models import Post  # Assuming your blog posts are in the 'blog' app
+from blog.models import Post  # Blog posts are in the 'blog' app
 
 def index(request):
     """

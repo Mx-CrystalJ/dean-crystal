@@ -4,4 +4,50 @@
 {% block content %}
 
 <h1>Home</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 2
+            CARRASOL1
+        </div>
+        <div class="col">
+            2 of 2
+            CARRASOL2
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3
+            BLOGPOSTS
+
+            {% for post in posts %}
+            <div class="mastheadhome">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-md-6 masthead-text">
+                            <h1 class="post-title">{{ post.title }}</h1>
+                            <p class="post-subtitle">{{ post.author.username }} | {{ post.date_published }}</p>
+                        </div>
+                        <div class="d-none d-md-block col-md-6 masthead-image">
+                            <img src="{% static 'images/book_blog_post.png' %}" class="scale" alt="placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col">
+            2 of 3
+            CONTENT
+        </div>
+        <div class="col">
+            3 of 3
+            NEWSLETTER
+            BOOKNEWSFEED
+        </div>
+    </div>
+</div>
+
 {% endblock %}

@@ -66,6 +66,15 @@ body {
     width: 100%;
 }
 
+.mastheadhome {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 850px
+}
+
 .masthead-text {
     background-color: #445261;
     color: white;
@@ -89,6 +98,10 @@ body {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
+}
+
+.container {
+    margin-left: 0%;
 }
 
 .post-link {
@@ -159,3 +172,7 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+
+
+
