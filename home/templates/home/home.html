@@ -117,6 +117,22 @@
       3 of 3
       NEWSLETTER
       BOOKNEWSFEED
+
+      <h2>Newsletter</h2>
+      <form method="POST">
+        {% csrf_token %}
+        {{ newsletter_form.as_p }}
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <hr>
+      
+      <h2>Book News</h2>
+      <ul>
+        {% for news_item in book_news %}
+        <li><a href="{{ news_item.link }}">{{ news_item.title }}</a></li>
+        {% endfor %}
+      </ul> 
     </div>
     <!--Newsletter & Bookfeed End-->
   </div>
