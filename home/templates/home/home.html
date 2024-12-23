@@ -90,11 +90,33 @@
       <!--Services Hint Section-->
       <h1>What I Offer</h1>
     
-      <p>I provide a range of services tailored to your needs, including:
-      Editorial Services: Manuscript critiques, developmental editing, copyediting, proofreading.
-      Formatting: Ebook formatting, print formatting, typesetting.
-      Web Development: Website design and development, content management systems.
-      Want to know more? Head over to my Services page to see how I can help you achieve your goals. (subtle link to Services page)</p>
+      <p>I provide a range of services tailored to your needs, including:</p>
+        <h2>Editorial Services:</h2>
+        <ul>
+          <li>Manuscript Critiques</li>
+          <li>Developmental Editing</li>
+          <li>Copyediting</li>
+          <li>Proofreading</li>
+        </ul>
+        <br>
+        <h2>Formatting:</h2>
+        <ul>
+          <li>Ebook Formatting</li>
+          <li>Print Formatting</li>
+          <li>Typesetting</li>
+        </ul>
+        <br>
+        <h2>Web Development:</h2>
+        <ul>
+          <li>Website Design and Development</li>
+          <li>Content Management Systems</li>
+        </ul>
+        <br>
+        <p>Want to know more? Head over to my <a href="https://8000-mxcrystalj-deancrystal-c7gck3irdrq.ws.codeinstitute-ide.net./services/">Services Page</a> to see how I can help you achieve your goals.</p>
+      
+      <br>
+
+      <button>Order Now!</button>
 
       <hr>
 
@@ -103,12 +125,7 @@
       <p>Dive into my blog for valuable tips on writing, publishing, and navigating the digital world. Curious about the latest in web development? I share that too! (subtle link to Blog page)</p>
     
       <hr>
-
-      <h1>Ready to Get Started?</h1>
-    
-      <p>Sign up for my newsletter to stay updated on the latest blog posts, service offerings, and exclusive tips for writers and developers.</p>
-    
-      <button>Sign Up Now</button>
+      
 
     </div>
     <!--Website Content End-->
@@ -118,15 +135,20 @@
       NEWSLETTER
       BOOKNEWSFEED
 
-      <h2>Newsletter</h2>
+      <h1>Newsletter</h1>
+      <h2>Ready to Get Regular Updates?</h2>
+    
+      <p>Sign up for my newsletter to stay updated on the latest blog posts, service offerings, and exclusive tips for writers and developers.</p>
+
       <form method="POST">
         {% csrf_token %}
         {{ newsletter_form.as_p }}
+        <p><a href="/terms&conditions">Read T&C Here!</a></p>
         <button type="submit">Subscribe</button>
       </form>
 
       <hr>
-      
+
       <h2>Book News</h2>
       <ul>
         {% for news_item in book_news %}
