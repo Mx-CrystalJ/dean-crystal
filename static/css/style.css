@@ -176,6 +176,20 @@ body {
     color: rgb(222, 146, 168);
 }
 
+.call-to-action a {
+    color: #007bff; /* link color */
+    text-decoration: none;
+  }
+  
+  .call-to-action a:hover {
+    text-decoration: underline; 
+}
+
+.smalllogo {
+    height: 25px; 
+    width: 25px;
+    border-radius: 20px;
+}
 
 .col {}
 

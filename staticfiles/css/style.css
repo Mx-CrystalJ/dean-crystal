@@ -159,3 +159,12 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.call-to-action a {
+    color: #090a0a; /* link color */
+    text-decoration: none;
+  }
+  
+  .call-to-action a:hover {
+    text-decoration: underline; 
+}

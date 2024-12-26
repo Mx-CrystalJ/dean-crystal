@@ -3,7 +3,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<h1>Home</h1>
 
 <div class="container">
   <div class="row">
@@ -60,6 +59,7 @@
     </div>
     <!--Carousel 2 End-->
   </div>
+  <hr>
   <div class="row">
     <!--Blog Post Start-->
     <div class="col">
@@ -359,19 +359,22 @@
         {% csrf_token %}
         {{ newsletter_form.as_p }}
         <p><a href="/terms&conditions">Read T&C Here!</a></p>
-        <button type="submit">Subscribe</button>
+        <button class="call-to-action" type="submit">Subscribe</button>
       </form>
-
+       
       <hr>
 
-      <h2>Book News</h2>
+      <h2>Book & Coding News</h2>
       <ul>
         {% for news_item in book_news %}
-        <li><a href="{{ news_item.link }}">{{ news_item.title }}</a></li>
+        <li><a href="{{ news_item.link }}" class="call-to-action">{{ news_item.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
     <!--Newsletter & Bookfeed End-->
+
+
+
   </div>
 </div>
 
