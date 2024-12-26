@@ -4,4 +4,15 @@
 {% block content %}
 
 <h1>Services</h1>
+
+{% for service in services %}
+    <div class="service">
+        {% if service.profile_image %}
+            <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
+        {% endif %}
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        </div>
+{% endfor %}
+
 {% endblock %}

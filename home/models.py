@@ -31,14 +31,12 @@ class Testimonial(models.Model):
     """
     Model to store client testimonials
     """
-    testimonial_id = model.CharField(primary_key=True)
-    username = models.ForeignKey(User, max_length=200)
+    testimonial_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='testimonials')    
     content = models.TextField()
-    service_id = models.ForeignKey(Service, )
-
 
     def __str__(self):
-        return f"Testimonial from {self.client_name}"
+        return f"Testimonial from {self.user.username}"
 
 
     

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from blog.models import Post  # Blog posts are in the 'blog' app
-from .models import NewsletterSubscriber, BookNews
+from .models import NewsletterSubscriber, BookNews, Testimonial
 from .forms import NewsletterForm
 
 def index(request):
