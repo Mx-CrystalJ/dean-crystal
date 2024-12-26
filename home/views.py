@@ -10,6 +10,7 @@ def index(request):
     posts = Post.objects.all()  # Retrieve all blog posts
     newsletter_form = NewsletterForm()  # Create an instance of your newsletter form
     book_news = BookNews.objects.all()  # Retrieve all book news items
+    testimonials = Testimonial.objects.all()  # Retrieve all testimonials
 
     if request.method == 'POST':  # Handle newsletter form submission
         newsletter_form = NewsletterForm(request.POST)
@@ -23,6 +24,7 @@ def index(request):
         'posts': posts,
         'newsletter_form': newsletter_form,  # Pass the form to the template
         'book_news': book_news,  # Pass the book news items to the template
+        'testimonials': testimonials,  # Add testimonials to the context
     }
     return render(request, 'home/home.html', context)
 
@@ -32,3 +34,4 @@ def terms_conditions(request):
     A view to return the terms and conditions page
     """
     return render(request, 'home/terms&conditions.html')
+

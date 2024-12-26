@@ -191,5 +191,8 @@ body {
     border-radius: 20px;
 }
 
-.col {}
+.columnalign {
+    display: flex;
+    align-items: center;
+}
 
