@@ -25,3 +25,10 @@ def index(request):
         'book_news': book_news,  # Pass the book news items to the template
     }
     return render(request, 'home/home.html', context)
+
+
+def terms_conditions(request):
+    """
+    A view to return the terms and conditions page
+    """
+    return render(request, 'home/terms&conditions.html')
