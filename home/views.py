@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from blog.models import Post  # Blog posts are in the 'blog' app
 from .models import NewsletterSubscriber, BookNews, Testimonial
-from .forms import NewsletterForm
+from .forms import NewsletterForm, TestimonialForm
 
 def index(request):
     """
@@ -35,3 +35,14 @@ def terms_conditions(request):
     """
     return render(request, 'home/terms&conditions.html')
 
+def submit_testimonial(request):
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST)
+        if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.user_id = request.user_id  # Set the logged-in user
+            testimonial.save()
+            return redirect('testimonials')  # Redirect to the testimonials page
+    else:
+        form = TestimonialForm()
+    return render(request, 'home/submit_testimonial.html', {'form': form})

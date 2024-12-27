@@ -1,5 +1,5 @@
 from django import forms
-from .models import NewsletterSubscriber
+from .models import NewsletterSubscriber, Testimonial
 
 class NewsletterForm(forms.ModelForm):
     """
@@ -28,3 +28,21 @@ class NewsletterForm(forms.ModelForm):
             'full_name': 'Full Name',
             'email': 'Email Address',
         }
+
+
+class TestimonialForm(forms.ModelForm):
+    """
+    Form for users to submit testimonials
+    """
+    class Meta:
+        model = Testimonial
+        fields = ['content']  # Include only the content field
+
+        widgets = {
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+        labels = {
+            'content': 'Your Testimonial',
+        }
+

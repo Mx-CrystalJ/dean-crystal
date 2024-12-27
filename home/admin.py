@@ -20,3 +20,13 @@ class BookNewsAdmin(admin.ModelAdmin):
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'content', 'approved') 
     search_fields = ('user__username', 'content') 
+    actions = ['approve_testimonials']  # Add an action to approve testimonials
+
+    def approve_testimonials(self, request, queryset):
+        """
+        Action to approve selected testimonials
+        """
+        queryset.update(approved=True)
+
+    approve_testimonials.short_description = "Approve selected testimonial"
+

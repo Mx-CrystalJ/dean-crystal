@@ -25,3 +25,25 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
+
+class Order(models.Model):
+    """
+    Model to represent orders placed by users
+    """
+    STATUS_CHOICES = (
+        ('pending', 'Pending'),
+        ('processing', 'Processing'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    )
+
+    order_id = models.AutoField(primary_key=True)
+    service_id = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='orders')
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
+    order_description = models.TextField()
+    order_date = models.DateTimeField(auto_now_add=True)
+    total_price = models.DecimalField(max_digits=8, decimal_places=2)
+    status = models.CharField(max_length=50, default='pending')
+
+    def __str__(self):
+        return f"Order #{self.order_id} - {self.user_id.username} - {self.service_id.name}"
