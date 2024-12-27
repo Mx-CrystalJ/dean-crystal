@@ -379,8 +379,28 @@
         <li><a href="{{ news_item.link }}" class="call-to-action">{{ news_item.title }}</a></li>
         {% endfor %}
       </ul>
+
+      <!--Newsletter & Bookfeed End-->
+
+      <!--Author Works Start-->
+      <h2>Author's Works</h2>
+
+      {% for work in authors_works %}
+      <div class="work">
+        {% if work.img %}
+        <img src="{{ work.img.url }}" alt="{{ work.title }} image">
+        {% endif %}
+        <h3>{{ work.title }} | {{ work.author_name }}</h3>
+        <p>{{ work.work_description }}</p>
+        {% if work.work_url %}
+        <a href="{{ work.work_url }}">View Work</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+
+
     </div>
-    <!--Newsletter & Bookfeed End-->
 
   </div>
 </div>
@@ -404,9 +424,9 @@
 
 <h2>Submit a Testimonial</h2>
 <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
 </form>
 
 

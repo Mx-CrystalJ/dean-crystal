@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NewsletterSubscriber, BookNews, Testimonial
+from .models import NewsletterSubscriber, BookNews, Testimonial, AuthorsWork
 
 
 # Register your models here.
@@ -30,3 +30,9 @@ class TestimonialAdmin(admin.ModelAdmin):
 
     approve_testimonials.short_description = "Approve selected testimonial"
 
+@admin.register(AuthorsWork)
+class AuthorsWorkAdmin(admin.ModelAdmin):
+    list_display = ('author_name', 'title', 'work_location', 'work_url', 'img')
+    search_fields = ('author_name','title', 'work_description')
+    list_filter = ('author_name','work_location',)
+    fields = ('author_name','title', 'img', 'work_description', 'work_url', 'work_location')

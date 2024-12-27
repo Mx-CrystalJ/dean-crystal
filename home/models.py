@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class NewsletterSubscriber(models.Model):
@@ -39,5 +40,30 @@ class Testimonial(models.Model):
     def __str__(self):
         return f"Testimonial from {self.user_id.username}"
 
+class AuthorsWork(models.Model):
+    """
+    Model to showcase the author's works
+    """
+    LOCATION_CHOICES = (
+        ('online_bookstore', 'Online Bookstore'),
+        ('online_free', 'Online Free'),
+        ('print_bookstore', 'Print Bookstore'),
+        ('library', 'Library'),
+        ('other', 'Other'),
+    )
 
-    
+    author = models.AutoField(primary_key=True)
+    author_name = models.CharField(max_length=100, default='Dean Crystal')
+    title = models.CharField(max_length=200)
+    img = CloudinaryField('image', default='placeholder')
+    work_description = models.TextField()
+    work_url = models.URLField(blank=True)
+    work_location = models.CharField(
+        max_length=200, 
+        blank=True, 
+        choices=LOCATION_CHOICES, 
+        default='online_bookstore' 
+    )
+
+    def __str__(self):
+        return self.title
