@@ -34,9 +34,10 @@ class Testimonial(models.Model):
     testimonial_id = models.AutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='testimonials')    
     content = models.TextField()
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Testimonial from {self.user.username}"
+        return f"Testimonial from {self.user_id.username}"
 
 
     

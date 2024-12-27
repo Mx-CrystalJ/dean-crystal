@@ -114,7 +114,8 @@
                 the project.
               </li>
               <li>
-                A personalised quote is provided based on the type of editing required, word count, and any specific requests.
+                A personalised quote is provided based on the type of editing required, word count, and any specific
+                requests.
               </li>
             </ul>
           </li>
@@ -127,7 +128,7 @@
               <li>
                 A timeline is established, with clear deadlines for each stage of the process.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
             Editing and Feedback:
@@ -136,13 +137,14 @@
                 The agreed-upon editing services (e.g., developmental editing, copyediting, proofreading) are completed.
               </li>
               <li>
-                The edited manuscript is returned to the client with clear and constructive feedback, using track changes and
+                The edited manuscript is returned to the client with clear and constructive feedback, using track
+                changes and
                 comments.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
-            Revisions and Finalisation:   
+            Revisions and Finalisation:
             <ul>
               <li>
                 The client reviews the edited manuscript and provides feedback or requests revisions.
@@ -156,7 +158,7 @@
             </ul>
           </li>
           <li>
-            Final Delivery: 
+            Final Delivery:
             <ul>
               <li>
                 The final manuscript is delivered in the requested format (e.g., Word document, PDF).
@@ -164,7 +166,7 @@
               <li>
                 Dean Crystal provides ongoing support and answers any questions a client may have.
               </li>
-            </ul>  
+            </ul>
           </li>
         </ol>
       </p>
@@ -185,14 +187,16 @@
             Inquiry and Consultation:
             <ul>
               <li>
-                Dean Crystal responds to the inquiry, requesting the manuscript and any relevant details (e.g., trim size,
+                Dean Crystal responds to the inquiry, requesting the manuscript and any relevant details (e.g., trim
+                size,
                 desired format).
               </li>
               <li>
                 A consultation is conducted to discuss the client's formatting preferences and goals.
               </li>
               <li>
-                A personalized quote is provided based on the complexity of the formatting and any additional services required
+                A personalized quote is provided based on the complexity of the formatting and any additional services
+                required
                 (e.g., typesetting, cover design).
               </li>
             </ul>
@@ -204,9 +208,10 @@
                 The client agrees to the terms and conditions and makes the payment (or arranges a payment plan).
               </li>
               <li>
-                A timeline for the project is established, with clear deadlines for each stage of the formatting process.
+                A timeline for the project is established, with clear deadlines for each stage of the formatting
+                process.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
             Formatting and Proofing:
@@ -217,7 +222,7 @@
               <li>
                 A proof copy is generated and reviewed for any errors or inconsistencies.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
             Client Review and Revisions:
@@ -237,13 +242,14 @@
             Final Delivery:
             <ul>
               <li>
-                The final formatted files are delivered to the client in the requested formats (e.g., .mobi for Kindle, .epub
+                The final formatted files are delivered to the client in the requested formats (e.g., .mobi for Kindle,
+                .epub
                 for other ebook readers, PDF for print).
               </li>
               <li>
                 Dean Crystal provides guidance on publishing and distribution options.
               </li>
-            </ul>  
+            </ul>
           </li>
         </ol>
       </p>
@@ -257,13 +263,14 @@
       </ul>
       <br>
       <h3>Full-Stack Web Development Process</h3>
-      <p> 
+      <p>
         <ol>
           <li>
             Inquiry and Consultation:
             <ul>
               <li>
-                Dean Crystal responds to the inquiry, requesting details about the project (e.g., website type, features, design
+                Dean Crystal responds to the inquiry, requesting details about the project (e.g., website type,
+                features, design
                 preferences).
               </li>
               <li>
@@ -283,7 +290,7 @@
               <li>
                 A contract is signed outlining the project deliverables and timelines.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
             Design and Development:
@@ -300,13 +307,14 @@
               <li>
                 Regular updates and progress reports are provided to the client.
               </li>
-            </ul>  
+            </ul>
           </li>
           <li>
             Testing and Deployment:
             <ul>
               <li>
-                The website is thoroughly tested on various devices and browsers to ensure functionality and responsiveness.
+                The website is thoroughly tested on various devices and browsers to ensure functionality and
+                responsiveness.
               </li>
               <li>
                 The client reviews and approves the final version of the website.
@@ -320,12 +328,13 @@
             Maintenance and Support:
             <ul>
               <li>
-                Ongoing maintenance and support are provided as needed, including bug fixes, updates, and security patches.
+                Ongoing maintenance and support are provided as needed, including bug fixes, updates, and security
+                patches.
               </li>
               <li>
                 Dean Crystal offers training and documentation to help the client manage their website
               </li>
-            </ul>  
+            </ul>
           </li>
         </ol>
       </p>
@@ -361,7 +370,7 @@
         <p><a href="/terms&conditions">Read T&C Here!</a></p>
         <button class="call-to-action" type="submit">Subscribe</button>
       </form>
-       
+
       <hr>
 
       <h2>Book & Coding News</h2>
@@ -383,12 +392,12 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      One of one Row
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      One of one Row
+      {% for testimonial in testimonials %}
+      <div class="testimonial">
+        <p>"{{ testimonial.content }}"</p>
+        <p>- {{ testimonial.user_id.username }}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

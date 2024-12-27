@@ -18,5 +18,5 @@ class BookNewsAdmin(admin.ModelAdmin):
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
-    list_display = ('user_id', 'content')
-    search_fields = ('user_id', 'content')
+    list_display = ('user_id', 'content', 'approved') 
+    search_fields = ('user__username', 'content') 
