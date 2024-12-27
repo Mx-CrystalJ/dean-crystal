@@ -1,9 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .forms import ContactForm
+
 
 # Create your views here.
 def contact_me(request):
     """
-    A view to return the contact page
+    A view to display the contact page and handle form submission
     """
-    return render(request, 'contact/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contact_submission = form.save(commit=False)
+            if request.user.is_authenticated:
+                contact_submission.user = request.user
+            contact_submission.save()
+            return redirect('contact_success')
+    else:
+        form = ContactForm()
+
+    context = {'form': form}
+    return render(request, 'contact/contact.html', context)
