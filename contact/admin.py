@@ -6,8 +6,8 @@ from .models import Contact
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'title', 'subject', 'status')
     list_filter = ('status',)
-    search_fields = ('user__username', 'title', 'subject', 'enquiry_description')  # Add search fields
-    actions = ['mark_as_read', 'mark_as_in_progress', 'mark_as_closed']  # Add actions
+    search_fields = ('user__username', 'title', 'subject', 'enquiry_description')
+    actions = ['mark_as_read', 'mark_as_in_progress', 'mark_as_closed']
 
     def mark_as_read(self, request, queryset):
         """
@@ -19,7 +19,7 @@ class ContactAdmin(admin.ModelAdmin):
 
     def mark_as_in_progress(self, request, queryset):
         """
-        Action to mark selected contact submissions as "in_progress"
+        Mark "in_progress"
         """
         queryset.update(status='in_progress')
 
@@ -27,7 +27,7 @@ class ContactAdmin(admin.ModelAdmin):
 
     def mark_as_closed(self, request, queryset):
         """
-        Action to mark selected contact submissions as "closed"
+        Mark "closed"
         """
         queryset.update(status='closed')
 
