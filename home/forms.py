@@ -36,13 +36,15 @@ class TestimonialForm(forms.ModelForm):
     """
     class Meta:
         model = Testimonial
-        fields = ['content']  # Include only the content field
+        fields = ['content', 'user_id']  # Include only the content field
 
         widgets = {
+            'user_id': forms.Select(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
         labels = {
             'content': 'Your Testimonial',
+            'user_id': 'User',
         }
 
