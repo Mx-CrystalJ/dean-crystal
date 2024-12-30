@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NewsletterSubscriber, BookNews, Testimonial, AuthorsWork
+from .models import NewsletterSubscriber, BookNews, Testimonial, AuthorsWork #Custom Models
 
 
 # Register your models here.
@@ -20,7 +20,7 @@ class BookNewsAdmin(admin.ModelAdmin):
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'content', 'approved') 
     search_fields = ('user__username', 'content') 
-    actions = ['approve_testimonials']  # Add an action to approve testimonials
+    actions = ['approve_testimonials']
 
     def approve_testimonials(self, request, queryset):
         """
