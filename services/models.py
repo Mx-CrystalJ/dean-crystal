@@ -10,6 +10,7 @@ class Service(models.Model):
         ('editing', 'Editing and Proofreading'),
         ('formatting', 'Book Formatting'),
         ('webdev', 'Web Development'),
+        ('author', 'Author Services'),
     )
 
     service_id = models.AutoField(primary_key=True)
@@ -33,6 +34,7 @@ class Order(models.Model):
     STATUS_CHOICES = (
         ('pending', 'Pending'),
         ('processing', 'Processing'),
+        ('in progress', 'In Progress'),
         ('completed', 'Completed'),
         ('cancelled', 'Cancelled'),
     )
