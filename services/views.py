@@ -20,7 +20,7 @@ def service(request):
             order.user_id = request.user
             # ... (Calculate total_price based on the selected service, etc.) ...
             order.save()
-            return redirect('services')
+            return redirect('order_confirmation')
 
     context = {
         'services': services,

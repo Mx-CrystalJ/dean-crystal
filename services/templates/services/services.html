@@ -5,15 +5,60 @@
 
 <h1>Services</h1>
 
-{% for service in services %}
-    <div class="service">
-        {% if service.profile_image %}
-            <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
-        {% endif %}
-        <h3>{{ service.name }}</h3>
-        <p>{{ service.description }}</p>
+
+<div class="row">
+    <div class="col-md-6">
+        {% for service in services %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="card text-center">
+            <div class="card-header">
+                {{ service.get_category_display }}
+            </div>
+            <div class="card-body">
+                {% if service.profile_image %}
+                <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
+                {% endif %}
+                <h3 class="card-title">{{ service.name }}</h3>
+                <p class="card-text">{{ service.description }}</p>
+                <p class="card-text">{{ service.word_count_range }}</p>
+                <a href="#" class="btn btn-primary">Order Now!</a>
+            </div>
+            <div class="card-footer text-muted">
+                £{{ service.min_price }} - £{{ service.max_price }}
+            </div>
         </div>
-{% endfor %}
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for service in services %}
+        {% if not forloop.counter|divisibleby:2 %}
+        <div class="card text-center">
+            <div class="card-header">
+                {{ service.get_category_display }}
+            </div>
+            <div class="card-body">
+                {% if service.profile_image %}
+                <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
+                {% endif %}
+                <h3 class="card-title">{{ service.name }}</h3>
+                <p class="card-text">{{ service.description }}</p>
+                <p class="card-text">{{ service.word_count_range }}</p>
+                <a href="#" class="btn btn-primary">Order Now!</a>
+            </div>
+            <div class="card-footer text-muted">
+                £{{ service.min_price }} - £{{ service.max_price }}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
 
 <h2>Place an Order</h2>
 
