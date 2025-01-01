@@ -3,7 +3,7 @@ from .models import Service, Order
 from django.http import HttpResponse
 from .models import Service, Order
 from .forms import OrderForm
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def service(request):
@@ -58,3 +58,11 @@ def delete_order(request, order_id):
     order = get_object_or_404(Order, pk=order_id)
     order.delete()
     return redirect('orders')
+
+@login_required 
+def orders(request):
+    """
+    A view to display the logged in user's orders
+    """
+    orders = Order.objects.filter(user=request.user)  # Get logged-in user's orders
+    return render(request, 'services/orders.html', {'orders': orders})

@@ -3,21 +3,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<h2>Your Orders</h2>
-{% for order in orders %}
-    <div class="order">
-        <h3>{{ order.service.name }}</h3>
-        <p>{{ order.description }}</p>
-        {% if order.user == user %}
-            <a href="{% url 'edit_order' order.order_id %}">Edit</a> | 
-            <a href="{% url 'delete_order' order.order_id %}">Delete</a>
-        {% endif %}
-    </div>
-{% endfor %}
-
-
-
-
 {% if user.is_authenticated %}
 <h2>Your Orders</h2>
 {% if orders %}
@@ -56,7 +41,6 @@
 {% else %}
 <p>Please <a href="{% url 'account_login' %}">log in</a> to view your orders.</p>
 {% endif %}
-
 
 
 
