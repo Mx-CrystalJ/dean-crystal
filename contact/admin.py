@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Contact
+from django_summernote.admin import SummernoteModelAdmin
+
 
 # Register your models here.
 @admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
+class ContactAdmin(SummernoteModelAdmin):
     list_display = ('user_id', 'title', 'subject', 'status')
     list_filter = ('status',)
     search_fields = ('user__username', 'title', 'subject', 'enquiry_description')

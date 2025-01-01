@@ -15,7 +15,7 @@ def contact_me(request):
             if request.user.is_authenticated:
                 contact_submission.user = request.user
             contact_submission.save()
-            return redirect('contact_success')
+            return redirect('index')
     else:
         form = ContactForm()
 
