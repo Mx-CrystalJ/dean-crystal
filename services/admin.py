@@ -9,4 +9,4 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('user_id', 'service_id', 'word_count_range', 'order_date', 'total_price', 'status',)
+    list_display = ('user_id', 'service_id', 'order_description', 'word_count_range', 'order_date', 'total_price', 'status',)

@@ -44,7 +44,7 @@ class Order(models.Model):
     service_id = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='orders')
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
     order_description = models.TextField()
-    word_count_range = models.CharField(max_length=100, blank=True, null=True)
+    word_count_range = models.DecimalField(max_digits=8, decimal_places=0, default=1)
     order_date = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
     status = models.CharField(max_length=50, default='pending')

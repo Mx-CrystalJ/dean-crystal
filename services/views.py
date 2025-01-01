@@ -18,9 +18,16 @@ def service(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             order.user_id = request.user
-            # ... (Calculate total_price based on the selected service, etc.) ...
+            # Calculate estimated total_price based on service's min and max prices
+        
+            service = order.service_id
+            min_price = service.min_price
+            max_price = service.max_price
+
+            # Example calculation (replace with your actual logic)
+            order.total_price = (min_price + max_price) / 2  # Average of min and max
             order.save()
-            return redirect('order_confirmation')
+            return redirect('services')
 
     context = {
         'services': services,
