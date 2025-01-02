@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .forms import ContactForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -15,6 +16,10 @@ def contact_me(request):
             if request.user.is_authenticated:
                 contact_submission.user = request.user
             contact_submission.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Enquiry submitted and awaiting 5 day answer period!'
+    )
             return redirect('index')
     else:
         form = ContactForm()

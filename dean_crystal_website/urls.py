@@ -19,6 +19,7 @@ from django.urls import path, include
 from home import views as index_views
 from services.views import service
 from contact.views import contact_me
+from services.views import orders
 
 
 urlpatterns = [
