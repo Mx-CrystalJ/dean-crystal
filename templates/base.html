@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
-<head> 
+<head>
     <title>Dean Crystal Author & Editor Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -34,7 +34,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <img src="/static/images/dean_crystal_logo.png" class="smalllogo" alt="Dean Crystal logo light blue to dark blue background with capital D & C with grey sparkles circling around the initials.">
+            <img src="/static/images/dean_crystal_logo.png" class="smalllogo"
+                alt="Dean Crystal logo light blue to dark blue background with capital D & C with grey sparkles circling around the initials.">
             <a class="navbar-brand" href="{% url 'index' %}"><span class="brand">D<span
                         class="blue-letter">ea</span>n<span class="thin">|Crystal</span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -62,6 +63,10 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == index %}active{% endif %}" aria-current="page"
                             href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == orders_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'orders' %}">Orders</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -118,9 +123,12 @@
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Made by <a href="https://www.linkedin.com/in/crystal-johnson-55b77032a/"
                 target="_blank">Crystal Johnson</a></p>
-        <p class="m-0 text-center text-white">Follow Dean Crystal: <a href="https://www.facebook.com/profile.php?id=61570059605131" target="_blank"><i class="fab fa-facebook-square ms-3"></i></a>
+        <p class="m-0 text-center text-white">Follow Dean Crystal: <a
+                href="https://www.facebook.com/profile.php?id=61570059605131" target="_blank"><i
+                    class="fab fa-facebook-square ms-3"></i></a>
             <a href="https://x.com/deancrystal95" target="_blank"><i class="fab fa-twitter-square ms-3"></i></a>
-            <a href="https://www.instagram.com/deancrystal95/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="https://www.instagram.com/deancrystal95/" target="_blank"><i
+                    class="fab fa-instagram-square ms-3"></i></a>
             <a href="https://www.youtube.com/@MxCrystalJ" target="_blank"><i class="fab fa-youtube-square ms-3"></i></a>
         </p>
         {% block copyright %}
