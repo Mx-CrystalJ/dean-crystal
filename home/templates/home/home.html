@@ -365,7 +365,7 @@
       <form method="POST">
         {% csrf_token %}
         {{ newsletter_form.as_p }}
-        <p><a href="">Read T&C Here!</a></p>
+        <p><a href="{% url 'terms_conditions' %}">Read T&C Here!</a></p>
         <button class="btn btn-primary" type="submit">Subscribe</button>
       </form>
 

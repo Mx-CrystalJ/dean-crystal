@@ -32,5 +32,5 @@ urlpatterns = [
     path("services/", service, name='services'),
     path('services/', include('services.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('', index_views.index, name='index'),
+    path('', include('home.urls')),
 ]
