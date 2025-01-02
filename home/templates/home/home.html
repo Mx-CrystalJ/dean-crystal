@@ -168,7 +168,7 @@
           </li>
         </ol>
       </p>
-      <button>Order Now!</button>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
       <hr>
 
       <h2>Formatting:</h2>
@@ -251,7 +251,7 @@
           </li>
         </ol>
       </p>
-      <button>Order Now!</button>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
       <hr>
 
       <h2>Web Development:</h2>
@@ -336,7 +336,7 @@
           </li>
         </ol>
       </p>
-      <button>Order Now!</button>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
 
       <hr>
 
@@ -347,7 +347,7 @@
 
       <br>
 
-      <button>Order Now!</button>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
 
       <hr>
 
@@ -365,8 +365,8 @@
       <form method="POST">
         {% csrf_token %}
         {{ newsletter_form.as_p }}
-        <p><a href="/terms&conditions">Read T&C Here!</a></p>
-        <button class="call-to-action" type="submit">Subscribe</button>
+        <p><a href="">Read T&C Here!</a></p>
+        <button  class="btn btn-primary" type="submit">Subscribe</button>
       </form>
 
       <hr>
@@ -374,7 +374,7 @@
       <h2>Book & Coding News</h2>
       <ul>
         {% for news_item in book_news %}
-        <li><a href="{{ news_item.link }}" class="call-to-action">{{ news_item.title }}</a></li>
+        <li><a href="{{ news_item.link }}" class="btn btn-primary" target="_blank">{{ news_item.title }}</a></li>
         {% endfor %}
       </ul>
 
@@ -391,7 +391,7 @@
         <h3>{{ work.title }} | {{ work.author_name }}</h3>
         <p>{{ work.work_description }}</p>
         {% if work.work_url %}
-        <a href="{{ work.work_url }}">View Work</a>
+        <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
         {% endif %}
       </div>
       {% endfor %}
@@ -420,12 +420,13 @@
   </div>
 </div>
 
-<h2>Submit a Testimonial</h2>
+
+<!--<h2>Submit a Testimonial</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ testimonial_form.as_p }}
   <button type="submit">Submit</button>
-</form>
+</form>-->
 
 
 {% endblock %}

@@ -30,21 +30,21 @@ class NewsletterForm(forms.ModelForm):
         }
 
 
-class TestimonialForm(forms.ModelForm):
-    """
-    Form for users to submit testimonials
-    """
-    class Meta:
-        model = Testimonial
-        fields = ['content', 'user_id']  # Include only the content field
-
-        widgets = {
-            'user_id': forms.Select(attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),
-        }
-
-        labels = {
-            'content': 'Your Testimonial',
-            'user_id': 'User',
-        }
+#class TestimonialForm(forms.ModelForm):
+#    """
+#    Form for users to submit testimonials
+#    """
+#    class Meta:
+#        model = Testimonial
+#        fields = ['content', 'user_id']  # Include only the content field
+#
+#        widgets = {
+#            'user_id': forms.Select(attrs={'class': 'form-control'}),
+#            'content': forms.Textarea(attrs={'class': 'form-control'}),
+#        }
+#
+#        labels = {
+#            'content': 'Your Testimonial',
+#            'user_id': 'User',
+#        }
 
