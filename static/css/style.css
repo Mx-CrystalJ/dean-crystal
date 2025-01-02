@@ -67,16 +67,16 @@ body {
 }
 
 .mastheadhome {
-    margin-top: 10px;
+    margin-top: 5px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: auto;
-    width: 850px
+    height: 150px;
+    width: 500px
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #5597de;
     color: white;
     position: relative;
 }
@@ -93,7 +93,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #5597de;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -108,18 +108,19 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #d3e6fb;
 }
 
 .post-link:hover,
 .page-link {
-    color: #0000ff;
+    color: #fafafa;
 }   
 
 .post-title {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 10%;
     margin-left: 5%;
+    color: #d3e6fb;
 }
 
 .post-subtitle {
@@ -177,11 +178,11 @@ body {
 }
 
 .call-to-action a {
-    color: #007bff; /* link color */
+    color: #e70f0f; /* link color */
     text-decoration: none;
   }
   
-  .call-to-action a:hover {
+.call-to-action a:hover {
     text-decoration: underline; 
 }
 

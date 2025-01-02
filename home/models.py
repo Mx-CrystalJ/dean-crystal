@@ -21,6 +21,7 @@ class BookNews(models.Model):
     Model to store book news items   
     """
     title = models.CharField(max_length=200)
+    img = CloudinaryField('image', default='placeholder')
     link = models.URLField() 
     publication_date = models.DateTimeField(auto_now_add=True)
 

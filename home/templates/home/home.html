@@ -366,7 +366,7 @@
         {% csrf_token %}
         {{ newsletter_form.as_p }}
         <p><a href="">Read T&C Here!</a></p>
-        <button  class="btn btn-primary" type="submit">Subscribe</button>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
       </form>
 
       <hr>
@@ -374,7 +374,10 @@
       <h2>Book & Coding News</h2>
       <ul>
         {% for news_item in book_news %}
-        <li><a href="{{ news_item.link }}" class="btn btn-primary" target="_blank">{{ news_item.title }}</a></li>
+        <li><img src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
+          <br>
+          <a href="{{ news_item.link }}" class="btn btn-primary btn-center" target="_blank">{{ news_item.title }}</a>
+        </li>
         {% endfor %}
       </ul>
 
