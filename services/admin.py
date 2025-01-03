@@ -9,9 +9,11 @@ class ServiceAdmin(SummernoteModelAdmin):
     list_display = ('name', 'min_price', 'max_price', 'category', 'word_count_range', 'turnaround_time',)
     search_fields = ['name', 'category']
     list_filter = ('category', 'turnaround_time',)
+    summernote_fields = ('description',)
 
 @admin.register(Order)
 class OrderAdmin(SummernoteModelAdmin):
     list_display = ('user_id', 'service_id', 'order_description', 'word_count_range', 'order_date', 'total_price', 'status',)
     search_fields = ['user_id', 'order_date']
     list_filter = ('status', 'order_date',)
+    summernote_fields = ('order_description',)

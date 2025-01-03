@@ -23,6 +23,7 @@ class TestimonialAdmin(SummernoteModelAdmin):
     list_display = ('user_id', 'content', 'approved') 
     search_fields = ('user__username', 'content') 
     actions = ['approve_testimonials']
+    summernote_fields = ('content',)
 
     def approve_testimonials(self, request, queryset):
         """
@@ -38,3 +39,4 @@ class AuthorsWorkAdmin(SummernoteModelAdmin):
     search_fields = ('author_name','title', 'work_description')
     list_filter = ('author_name','work_location',)
     fields = ('author_name','title', 'img', 'work_description', 'work_url', 'work_location')
+    summernote_fields = ('work_description',)
