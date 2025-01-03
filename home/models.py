@@ -12,7 +12,7 @@ class NewsletterSubscriber(models.Model):
     subscribed_date = models.DateTimeField(auto_now_add=True)
     terms_conditions = models.BooleanField(default=False)
 
-    def __str__(self):
+    def __str__(self): 
         return self.email
 
 

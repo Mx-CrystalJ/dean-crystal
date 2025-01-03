@@ -392,7 +392,7 @@
         <img src="{{ work.img.url }}" alt="{{ work.title }} image">
         {% endif %}
         <h3>{{ work.title }} | {{ work.author_name }}</h3>
-        <p>{{ work.work_description }}</p>
+        <p>{{ work.work_description | safe }} </p>
         {% if work.work_url %}
         <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
         {% endif %}
