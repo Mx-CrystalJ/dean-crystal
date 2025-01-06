@@ -415,7 +415,7 @@
     <div class="col-sm">
       {% for testimonial in testimonials %}
       <div class="testimonial">
-        <p>"{{ testimonial.content }}"</p>
+        <p>"{{ testimonial.content | safe }}"</p>
         <p>- {{ testimonial.user_id.username }}</p>
       </div>
       {% endfor %}
