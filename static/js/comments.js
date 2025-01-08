@@ -49,3 +49,4 @@ for (let button of deleteButtons) {
   });
 }
 
+$('.carousel').carousel();
