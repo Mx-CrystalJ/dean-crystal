@@ -33,7 +33,7 @@
     </div>
     <!--Carousel 1 End-->
     <!--Carousel 2 Start-->
-    <div class="col">
+    <div class="col hide-element">
       <div id="carouselExampleInterval1" class="carousel slide" data-ride="carousel1">
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="20000">
@@ -376,7 +376,7 @@
       <h2>Book & Coding News</h2>
       <ul style="list-style-type: none;">
         {% for news_item in book_news %}
-        <li><img src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
+        <li><img class="news-img" src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
           <br>
           <a href="{{ news_item.link }}" class="btn btn-primary btn-center" target="_blank">{{ news_item.title }}</a>
         </li>
