@@ -55,6 +55,28 @@ tr {
     background-color: transparent;
 }
 
+.card-header {
+    border-color: #188181;
+    border-width: 10px;
+}
+
+.card-body {
+    border-color: #23BBBB;
+}
+
+.service-img-view {
+    height: 180px;
+    width: 320px;
+}
+
+#id_service_id {
+    width: 344px;
+}
+
+#id_order_description {
+    width: 344px;
+}
+
 .image-container {
     position: relative;
 }
