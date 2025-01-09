@@ -48,5 +48,7 @@ for (let button of deleteButtons) {
     deleteModal.show();
   });
 }
-
-$('.carousel').carousel();
+/** JQuery Javascript Carousel */
+$(document).ready(function () {
+  $('#carouselExampleInterval').carousel();
+});
