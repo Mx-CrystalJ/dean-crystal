@@ -47,6 +47,8 @@ This website is an online portfolio and platform for Dean Crystal, an author, pu
 
 ## Entity Relationship diagram
 
+
+
 ## Data Model
 
 ## Planning
@@ -424,6 +426,8 @@ This includes:
 - Manual testing is conducted throughout the development process.
 - Automated testing may be implemented for specific features.
 - Testing focuses on functionality, usability, and responsiveness.
+
+[Research & testing img](/documentation/research/research_testing_img.md).
 
 ## Deployment
 

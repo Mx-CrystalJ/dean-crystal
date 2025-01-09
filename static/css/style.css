@@ -58,10 +58,17 @@ tr {
 .card-header {
     border-color: #188181;
     border-width: 10px;
+    background-color: #aaebe3;
 }
 
 .card-body {
     border-color: #23BBBB;
+    border-width: 10px;
+}
+
+.card-footer {
+    border-color: #23BBBB;
+    border-width: 10px;
 }
 
 .service-img-view {

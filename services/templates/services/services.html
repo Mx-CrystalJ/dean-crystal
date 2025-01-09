@@ -7,7 +7,7 @@
 
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 card-color-view">
         {% for service in services %}
         {% if forloop.counter|divisibleby:2 %}
         <div class="card text-center">
@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 {% if service.profile_image %}
-                <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
+                <img class="service-img-view" src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
                 {% endif %}
                 <h3 class="card-title">{{ service.name }}</h3>
                 <p class="card-text">{{ service.description }}</p>
@@ -39,7 +39,7 @@
             </div>
             <div class="card-body">
                 {% if service.profile_image %}
-                <img src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
+                <img class="service-img-view" src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
                 {% endif %}
                 <h3 class="card-title">{{ service.name }}</h3>
                 <p class="card-text">{{ service.description | safe }}</p>
