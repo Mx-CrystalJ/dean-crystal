@@ -19,7 +19,7 @@ def contact_me(request):
             messages.add_message(
                 request, messages.SUCCESS,
                 'Enquiry submitted and awaiting 5 day answer period!'
-    )
+            )
             return redirect('index')
     else:
         form = ContactForm()

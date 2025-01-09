@@ -52,3 +52,7 @@ for (let button of deleteButtons) {
 $(document).ready(function () {
   $('#carouselExampleInterval').carousel();
 });
+
+$(document).ready(function () {
+  $('#carouselExampleInterval1').carousel1();
+});

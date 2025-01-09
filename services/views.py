@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
-
 # Create your views here.
 def service(request):
     """
@@ -22,18 +21,19 @@ def service(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             order.user_id = request.user
-            # Calculate estimated total_price based on service's min and max prices
-        
+            # Calculate estimated total_price
+            # based on service's min and max prices
+
             service = order.service_id
             min_price = service.min_price
             max_price = service.max_price
 
             # Example calculation (replace with your actual logic)
-            order.total_price = (min_price + max_price) / 2  # Average of min and max
+            order.total_price = (min_price + max_price) / 2  # Average min/max
             order.save()
             messages.add_message(
-            request, messages.SUCCESS,
-            'Order submitted and awaiting approval! You will be contacted within 48hrs!')
+                request, messages.SUCCESS,
+                'Order submitted for approval! Expect within 48hrs!')
             return redirect('services')
 
     context = {
@@ -53,12 +53,13 @@ def edit_order(request, order_id):
         if form.is_valid():
             form.save()
             messages.add_message(
-            request, messages.SUCCESS,
-            'Order edit submitted and awaiting approval! You will be contacted within 24hrs!')
+                request, messages.SUCCESS,
+                'Order edit awaiting approval! Expect within 24hrs!')
             return redirect('services')
     else:
         form = OrderForm(instance=order)
-    return render(request, 'services/edit_order.html', {'form': form, 'order': order})
+    return render(
+        request, 'services/edit_order.html', {'form': form, 'order': order})
 
 
 def delete_order(request, order_id):
@@ -72,10 +73,11 @@ def delete_order(request, order_id):
             'Your order was successfully deleted!')
     return redirect('services')
 
-@login_required 
+
+@login_required
 def orders(request):
     """
     A view to display the logged in user's orders
     """
-    orders = Order.objects.filter(user_id=request.user)  # Get logged-in user's orders
+    orders = Order.objects.filter(user_id=request.user)
     return render(request, 'services/orders.html', {'orders': orders})

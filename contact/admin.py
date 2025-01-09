@@ -8,7 +8,8 @@ from django_summernote.admin import SummernoteModelAdmin
 class ContactAdmin(SummernoteModelAdmin):
     list_display = ('user_id', 'title', 'subject', 'status')
     list_filter = ('status',)
-    search_fields = ('user__username', 'title', 'subject', 'enquiry_description')
+    search_fields = ('user__username', 'title', 'subject',
+                     'enquiry_description')
     actions = ['mark_as_read', 'mark_as_in_progress', 'mark_as_closed']
 
     def mark_as_read(self, request, queryset):
@@ -17,7 +18,7 @@ class ContactAdmin(SummernoteModelAdmin):
         """
         queryset.update(status='read')
 
-    mark_as_read.short_description = "Mark selected submissions as read"
+    mark_as_read.short_description = "Mark submissions as read"
 
     def mark_as_in_progress(self, request, queryset):
         """
@@ -25,7 +26,7 @@ class ContactAdmin(SummernoteModelAdmin):
         """
         queryset.update(status='in_progress')
 
-    mark_as_in_progress.short_description = "Mark selected submissions as in progress"
+    mark_as_in_progress.short_description = "Mark submissions in progress"
 
     def mark_as_closed(self, request, queryset):
         """
@@ -33,4 +34,4 @@ class ContactAdmin(SummernoteModelAdmin):
         """
         queryset.update(status='closed')
 
-    mark_as_closed.short_description = "Mark selected submissions as closed"
+    mark_as_closed.short_description = "Mark submissions as closed"

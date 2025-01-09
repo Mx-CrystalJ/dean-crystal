@@ -12,6 +12,7 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
+
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
@@ -42,20 +43,18 @@ def post_detail(request, slug):
                 'Comment submitted and awaiting approval'
             )
 
-    
     comment_form = CommentForm()
-
 
     return render(
         request,
         "blog/post_detail.html",
         {"post": post,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,
-        "coder": "Written by: Dean Crystal",
-        },
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+            "coder": "Written by: Dean Crystal", },
     )
+
 
 def comment_edit(request, slug, comment_id):
     """
@@ -73,9 +72,15 @@ def comment_edit(request, slug, comment_id):
             comment.post_id = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -92,6 +97,9 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request,
+            messages.ERROR,
+            'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
