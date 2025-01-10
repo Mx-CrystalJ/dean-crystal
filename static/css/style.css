@@ -11,6 +11,10 @@ body {
     background-color: #F9FAFC;
 }
 
+main {
+    width: 100%;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -191,11 +195,9 @@ tr {
     color: #022750;
 }
 
-
 img {
     max-width: fit-content;
 }
-
 
 .post-subtitle {
     margin-left: 5%;
