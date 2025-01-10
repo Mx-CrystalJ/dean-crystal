@@ -5,7 +5,7 @@
 
 
 <div class="container">
-  <div class="row">
+  <div class="row container-alignment">
     <!--Carousel 1 Start-->
     <div class="col container1-size">
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -79,7 +79,7 @@
       {% for post in posts %}
       <div class="mastheadhome">
         <div class="container">
-          <div class="row g-0">
+          <div class="row g-0 post-alignent">
             <div class="col-md-6 masthead-text">
               <a href="/blog">
                 <h1 class="post-title">{{ post.title }}</h1>
@@ -94,21 +94,24 @@
       </div>
       {% endfor %}
 
+      <hr>
 
-      <h2>Author's Works</h2>
+
+      <h1>Author's Works</h1>
 
       {% for work in authors_works %}
       <div class="work">
         {% if work.img %}
-        <img src="{{ work.img.url }}" alt="{{ work.title }} image">
+        <img class="img-alignment" src="{{ work.img.url }}" alt="{{ work.title }} image">
         {% endif %}
-        <h3>{{ work.title }} | {{ work.author_name }}</h3>
+        <h2>{{ work.title }} | {{ work.author_name }}</h2>
         <p>{{ work.work_description | safe }} </p>
         {% if work.work_url %}
         <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
         {% endif %}
       </div>
       {% endfor %}
+      <hr>
 
     </div>
     <!--Blog Post End-->
@@ -118,7 +121,7 @@
       <h1>What Services Are on Offer?</h1>
 
       <p>I provide a range of services that can be tailored to your needs, including:</p>
-      <h2>Editorial Services:</h2>
+      <h2>Editorial Services</h2>
       <ul>
         <li>Manuscript Critiques</li>
         <li>Developmental Editing</li>
@@ -202,7 +205,7 @@
       <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
       <hr>
 
-      <h2>Formatting:</h2>
+      <h2>Formatting</h2>
       <ul>
         <li>Ebook Formatting</li>
         <li>Print Formatting</li>
@@ -285,7 +288,7 @@
       <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
       <hr>
 
-      <h2>Web Development:</h2>
+      <h2>Web Development</h2>
       <ul>
         <li>Website Design and Development</li>
         <li>Content Management Systems</li>
@@ -371,8 +374,8 @@
 
       <hr>
 
-      <p>Want to know more? Head over to Dean Crystal's <a
-          href="https://8000-mxcrystalj-deancrystal-c7gck3irdrq.ws.codeinstitute-ide.net./services/">Services Page</a>
+      <p>Want to know more? Head over to Dean Crystal's 
+        <a href="https://8000-mxcrystalj-deancrystal-c7gck3irdrq.ws.codeinstitute-ide.net./services/">Services Page</a>
         to see how they can help you to hit your goals.
       </p>
 
@@ -403,11 +406,12 @@
       <hr>
 
       <h2>Book & Coding News</h2>
-      <ul style="list-style-type: none;">
+      <ul class="ul-booknews-alignment">
+        <br>
         {% for news_item in book_news %}
         <li><img class="news-img" src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
           <br>
-          <a href="{{ news_item.link }}" class="btn btn-primary btn-center" target="_blank">{{ news_item.title }}</a>
+          <a href="{{ news_item.link }}" class="btn btn-primary btn-center news-buttons" target="_blank">{{ news_item.title }}</a>
         </li>
         {% endfor %}
       </ul>
