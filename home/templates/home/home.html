@@ -11,14 +11,20 @@
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="20000">
-            <img src="{% static 'images/carrousel_creative_editing.png' %}" class="d-block w-100" alt="...">
+            <a href="{% url 'services' %}" target="_blank">
+              <img src="{% static 'images/carrousel_creative_editing.png' %}" class="d-block w-100" alt="...">
+            </a>
           </div>
           <div class="carousel-item" data-interval="2000">
-            <img src="{% static 'images/carrousel_academic_proofreading_consultation.png' %}" class="d-block w-100"
+            <a href="{% url 'services' %}" target="_blank">
+              <img src="{% static 'images/carrousel_academic_proofreading_consultation.png' %}" class="d-block w-100"
               alt="...">
+            </a>
           </div>
           <div class="carousel-item">
-            <img src="{% static 'images/carrousel_book_formatting.png' %}" class="d-block w-100" alt="...">
+            <a href="{% url 'services' %}" target="_blank">
+              <img src="{% static 'images/carrousel_book_formatting.png' %}" class="d-block w-100" alt="...">
+            </a>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -29,6 +35,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+        
       </div>
     </div>
     <!--Carousel 1 End-->
@@ -37,13 +44,20 @@
       <div id="carouselExampleInterval1" class="carousel slide" data-ride="carousel1">
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="20000">
-            <img src="{% static 'images/carrousel_web_development.png' %}" class="d-block w-100" alt="...">
+              <a href="{% url 'services' %}" target="_blank">
+                <img src="{% static 'images/carrousel_web_development.png' %}" class="d-block w-100" alt="...">
+              </a>
+            </a>
           </div>
           <div class="carousel-item" data-interval="2000">
-            <img src="{% static 'images/carrousel_general_promotions.png' %}" class="d-block w-100" alt="...">
+            <a href="{% url 'services' %}" target="_blank">
+              <img src="{% static 'images/carrousel_general_promotions.png' %}" class="d-block w-100" alt="...">
+            </a>
           </div>
           <div class="carousel-item">
-            <img src="{% static 'images/carrousel_testimoniala.png' %}" class="d-block w-100" alt="...">
+            <a href="{% url 'services' %}" target="_blank">
+              <img src="{% static 'images/carrousel_testimoniala.png' %}" class="d-block w-100" alt="...">
+            </a>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleInterval1" role="button" data-slide="prev">
@@ -56,7 +70,6 @@
         </a>
       </div>
     </div>
-
     <!--Carousel 2 End-->
   </div>
   <hr>
@@ -78,6 +91,22 @@
             </div>
           </div>
         </div>
+      </div>
+      {% endfor %}
+
+
+      <h2>Author's Works</h2>
+
+      {% for work in authors_works %}
+      <div class="work">
+        {% if work.img %}
+        <img src="{{ work.img.url }}" alt="{{ work.title }} image">
+        {% endif %}
+        <h3>{{ work.title }} | {{ work.author_name }}</h3>
+        <p>{{ work.work_description | safe }} </p>
+        {% if work.work_url %}
+        <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
+        {% endif %}
       </div>
       {% endfor %}
 
@@ -384,23 +413,6 @@
       </ul>
 
       <!--Newsletter & Bookfeed End-->
-
-      <!--Author Works Start-->
-      <h2>Author's Works</h2>
-
-      {% for work in authors_works %}
-      <div class="work">
-        {% if work.img %}
-        <img src="{{ work.img.url }}" alt="{{ work.title }} image">
-        {% endif %}
-        <h3>{{ work.title }} | {{ work.author_name }}</h3>
-        <p>{{ work.work_description | safe }} </p>
-        {% if work.work_url %}
-        <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
-        {% endif %}
-      </div>
-      {% endfor %}
-
 
 
     </div>
