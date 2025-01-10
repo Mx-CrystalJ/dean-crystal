@@ -92,7 +92,7 @@
                 <img class="service-img-view" src="{{ service.profile_image.url }}" alt="{{ service.name }} image">
                 {% endif %}
                 <h3 class="card-title">{{ service.name }}</h3>
-                <p class="card-text">{{ service.description }}</p>
+                <p class="card-text">{{ service.description | safe }}</p>
                 <p class="card-text">{{ service.word_count_range }}</p>
                 <a href="#" class="btn btn-primary">Order Now!</a>
             </div>

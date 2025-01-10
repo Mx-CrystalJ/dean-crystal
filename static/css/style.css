@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    width: 100%;
+    width: 500px;
 }
 
 .brand {
@@ -158,7 +158,7 @@ tr {
 .container {
     margin-left: 0%;
     margin-right: 0%;
-    max-width: 340px;
+    max-width: fit-content;
 }
 
 .hide-element {
@@ -296,13 +296,18 @@ img {
 @media screen and (min-width: 576px) {
     main {
         max-width: 100%;
+        display: contents;
     }
 
     .container {
         margin-left: 0%;
         margin-right: 0%;
-        max-width: 100%;
+        max-width: fit-content;
     }
+
+    
+
+
 }
 
 
@@ -320,7 +325,7 @@ img {
     .container {
         margin-left: 0%;
         margin-right: 0%;
-        max-width: 100%;
+        max-width: fit-content;
     }
 
     .news-img {
@@ -331,19 +336,20 @@ img {
 
 /* Media query: tablets and larger (1200px and up) */
 @media screen and (min-width: 1200px) {
-    main {
-        max-width: 100%;
-    }
-
-    .hide-element {
-        display: contents
-    }
+   
 
     .container {
         margin-left: 0%;
         margin-right: 0%;
-        max-width: 100%;
+        max-width: auto;
     }
+
+    .container1-size {
+        display: block;
+        max-width: auto;
+        width: max-content;
+    }
+    
 
     .news-img {
         width: 520px;
