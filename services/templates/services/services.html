@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="row">
+<div class="row card-page-sizing">
     <h1>Creative Writing Editorial Process (Includes Developmental Editing and Proofreading)</h1>
     <br>
     <p>
@@ -12,7 +12,7 @@
     </p>
     <br>
     <h4><img src="/static/images/dragon_18265625.gif" alt="An open book with movind green neaon fire gif." width="50px">Developmental Editing</h4>
-    <ol>
+    <ol class="service-list">
         <li>
             We'll analyse the big-picture elements of your story, including:
             <ul>
@@ -79,12 +79,12 @@
 <br>
 <h1 style="text-align: center;"> Services</h1>
 <br>
-<div class="row">
+<div class="row card-page-sizing">
     <div class="col-md-6 card-color-view">
         {% for service in services %}
         {% if forloop.counter|divisibleby:2 %}
         <div class="card text-center">
-            <div class="card-header">
+            <div class="card-header card-sizing">
                 {{ service.get_category_display }}
             </div>
             <div class="card-body">
@@ -94,7 +94,7 @@
                 <h3 class="card-title">{{ service.name }}</h3>
                 <p class="card-text">{{ service.description | safe }}</p>
                 <p class="card-text">{{ service.word_count_range }}</p>
-                <a href="#" class="btn btn-primary">Order Now!</a>
+                <a href="#bottom" class="btn btn-primary">Order Now!</a>
             </div>
             <div class="card-footer text-muted">
                 £{{ service.min_price }} - £{{ service.max_price }}
@@ -107,7 +107,7 @@
         {% for service in services %}
         {% if not forloop.counter|divisibleby:2 %}
         <div class="card text-center">
-            <div class="card-header">
+            <div class="card-header card-sizing">
                 {{ service.get_category_display }}
             </div>
             <div class="card-body">
@@ -117,9 +117,9 @@
                 <h3 class="card-title">{{ service.name }}</h3>
                 <p class="card-text">{{ service.description | safe }}</p>
                 <p class="card-text">{{ service.word_count_range }}</p>
-                <a href="#" class="btn btn-primary">Order Now!</a>
+                <a href="#bottom" class="btn btn-primary">Order Now!</a>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted card-sizing">
                 £{{ service.min_price }} - £{{ service.max_price }}
             </div>
         </div>
@@ -135,7 +135,7 @@
 
 <h2>Place an Order</h2>
 
-<form method="post">
+<form method="post" id="bottom">
     {% csrf_token %}
     {{ order_form.as_p }}
     <button type="submit" class="btn btn-primary">Order Now</button>
