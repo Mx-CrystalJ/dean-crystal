@@ -403,10 +403,8 @@
 
       <h2>Book & Coding News</h2>
       <ul class="ul-booknews-alignment">
-        <br>
         {% for news_item in book_news %}
         <li><img class="news-img" src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
-          <br>
           <a href="{{ news_item.link }}" class="btn btn-primary btn-center news-buttons"
             target="_blank">{{ news_item.title }}</a>
         </li>
