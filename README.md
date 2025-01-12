@@ -447,7 +447,7 @@ This includes:
 
 
 ## Manual Testing user stories
-Test all your user stories, you an create table 
+
 User Story |  Test | Pass
 --- | --- | :---:
 As a Site User I can understand Dean Crystal's offerings quickly so that I can decide if they're the right editor for me. | Carousels with services, link to services, and a section that explaines the type of service offered. | &check;
@@ -486,7 +486,9 @@ As a Site Admin, I can track client interactions and order details so that I can
 [Home Page](/documentation/images/features/order_tracking_admin.png).
 
 ### Manual Testing features
-Test all your features, you can use the same approach 
+
+Test all your features, you can use the same approach.
+
 | Feature | Action | Status | 
 |:-------:|:--------| :--------|
 | description | user steps | &check; |
@@ -494,15 +496,24 @@ attach screenshot
 
 ## Bugs
 
+1. Placing an order as a general site user: Restriction places using an if else statement in the home.html.
+2. Carousel spacing & sizing issues: 
+3. Order page too long on larger devices: 
+4. 
+5. 
+
+
 ## Browser Compatibility
 
 **Google's Lighthouse Performance**
 Screenshots of certain pages and scores (mobile and desktop)
 
+[Home Page](/documentation/images/features/order_tracking_admin.png).
+
 **Browser Compatibility**
 Check compatability with different browsers
 
-# Deployment
+## Deployment
 
 The final version of the website will be deployed to the cloud-based hosting platform, Heroku.
 
@@ -565,10 +576,9 @@ Please note that when deploying manually you will have to deploy after each chan
 ![Step Seven](/documentation/images/steps/7.%20Full%20Initial%20Deployment%20Commited.png)
 
 **Version Control**
-
 Git will be used for version control, and GitHub will be used to document the development process. Meaningful commit messages will be used to track changes and progress.
 
-# Credits
+## Credits
 
 - Content & design input: Dean Crystal & Lisa J Bull (Doe Corporation)
 - Favicon Icon - <a href="https://www.freepik.com/search">Icon by Freepik</a>
