@@ -445,7 +445,62 @@ This includes:
 
 [Research & testing images](/documentation/research/research_testing_img.md).
 
+
+## Manual Testing user stories
+Test all your user stories, you an create table 
+User Story |  Test | Pass
+--- | --- | :---:
+As a Site User I can understand Dean Crystal's offerings quickly so that I can decide if they're the right editor for me. | Carousels with services, link to services, and a section that explaines the type of service offered. | &check;
+[Home Page](/documentation/images/features/home_page.png).
+As a Site User, I can easily access the blog or recent testimonials so that I can stay updated on Dean Crystal's work. | A view of the current blog posts | &check;
+[Home Page](/documentation/images/features/home_page.png).
+As a Site User, I can see clear contact information and calls to action so that I can inquire about services. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/call_to_action.png).
+As a Site User, I can learn about Dean Crystal's background and experience so that I can assess their expertise. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/about_page.png).
+As a Site User, I can understand Dean Crystal's writing journey so that I can connect with them on a personal level. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/about_page.png.)
+As a Site User, I can see a clear breakdown of services and pricing so that I can make an informed decision. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/service_card.png).
+As a Site User, I can read detailed testimonials so that I can see what past clients say about Dean Crystal's work. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/testimonials_section.png).
+As a Site User, I can comment on blog posts so that I can engage with the author and other readers. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/blog_detail_page.png).
+As a Site User, I can have multiple ways to contact Dean Crystal so that I can choose the most convenient method. | Contact page for direct requests, social media in footer | &check;
+[Home Page](/documentation/images/features/contact_page_socials.png). 
+As a Site User, I can see a clear confirmation message after submitting the contact form so that I know my inquiry has been received. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/contact_approval.png).
+As a Site User, I can create an account so that I can access exclusive content or track my orders. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/sign_up_page.png).
+As a Site User, I can find a secure and straightforward login/registration process so that I can access my account effortlessly. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/sign_in_page.png).
+As a Site Admin, I can add, edit, and delete website content so that I can keep the site updated. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/admin_summernote.png).
+As a Site Admin, I can manage user accounts so that I can control access to restricted content. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/user_admin.png).
+As a Site Admin I can create, edit, and delete blog posts so that I can maintain an active blog. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/blog_admin_summernote.png).
+As a Site Admin, I can moderate comments on blog posts so that I can ensure a positive community space. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/comment_appoval_admin.png).
+As a Site Admin, I can track client interactions and order details so that I can manage my workload efficiently. | what is visible to the user and what action they should perform | &check;
+[Home Page](/documentation/images/features/order_tracking_admin.png).
+
+### Manual Testing features
+Test all your features, you can use the same approach 
+| Feature | Action | Status | 
+|:-------:|:--------| :--------|
+| description | user steps | &check; |
+attach screenshot
+
 ## Bugs
+
+## Browser Compatibility
+
+**Google's Lighthouse Performance**
+Screenshots of certain pages and scores (mobile and desktop)
+
+**Browser Compatibility**
+Check compatability with different browsers
 
 # Deployment
 
