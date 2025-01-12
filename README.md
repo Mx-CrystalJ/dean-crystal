@@ -26,6 +26,7 @@ This repository contains the code for Dean Crystal's book services, author works
 * [Features](#features)
 	- [Technologies Used](#technologies-used)  
 * [Testing](#testing)
+	- [Bugs](#bugs)
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [License](#license)
@@ -36,17 +37,9 @@ This website is an online portfolio and platform for Dean Crystal, an author, pu
 
 # Project Planning
 
-## Entity Relationship diagram
+**Entity Relationship diagram**
 
 ![ERD](/documentation/images/wireframes/EDR%20Chart.png)
-
-## Data Model
-
-![Data Model]()
-
-## Planning
-
-### Goals
 
 **Project Goals**
 
@@ -419,7 +412,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 - Ensure sufficient color contrast, keyboard navigation, and alternative text for images.
 - Use semantic HTML for proper structure and meaning.
 
-## Technologies Used
+# Technologies Used
 
 - Django
 - Python
@@ -433,7 +426,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 - Figma (for design mockups)
 - Gemini: No Code was taken from AI.
 
-## Testing
+# Testing
 
 Coding Standards
 
@@ -452,7 +445,9 @@ This includes:
 
 [Research & testing images](/documentation/research/research_testing_img.md).
 
-## Deployment
+## Bugs
+
+# Deployment
 
 The final version of the website will be deployed to the cloud-based hosting platform, Heroku.
 
@@ -468,6 +463,44 @@ The final version of the website will be deployed to the cloud-based hosting pla
 
 **Steps:**
 
+This website is deployed to Heroku from a GitHub repository, the following steps were taken:
+
+Creating Repository on GitHub
+
+First make sure you are signed into Github and go to the code institutes template, which can be found here.
+
+Then click on use this template and select Create a new repository from the drop-down. Enter the name for the repository and click Create repository from template.
+
+Once the repository was created, I clicked the green gitpod button to create a workspace in gitpod so that I could write the code for the site.
+
+Creating an app on Heroku
+
+After creating the repository on GitHub, head over to heroku and sign in.
+
+On the home page, click New and Create new app from the drop down.
+
+Give the app a name(this must be unique) and select a region I chose Europe as I am in Europe, Then click Create app.
+
+Create a database
+
+Log into CIdatabase maker.
+Add your email address in input field and submit the form.
+Open database link in your email.
+Paste dabase URL in your DATABASE_URL variable in env.py file and in Heroku config vars.
+
+Deploying to Heroku:
+
+Head back over to heroku and click on your app and then go to the Settings tab
+On the settings page scroll down to the config vars section and enter the DATABASE_URL which you will set equal to the elephantSQL URL, create Secret key this can be anything, CLOUDINARY_URL this will be set to your cloudinary url and finally Port which will be set to 8000.
+
+Then scroll to the top and go to the deploy tab and go down to the Deployment method section and select Github and then sign into your account.
+
+Below that in the search for a repository to connect to search box enter the name of your repository that you created on GitHub and click connect.
+
+Once it has been connected scroll down to the Manual Deploy and click Deploy branch when it has deployed you will see a view app button below and this will bring you to your newly deployed app.
+
+Please note that when deploying manually you will have to deploy after each change you make to your repository.
+
 ![Step One](/documentation/images/steps/1.%20POST%20Wire%20up.png)
 ![Step Two](/documentation/images/steps/2.%20Heroku%20Deployment%20Github%20Connect.png)
 ![Step Three](/documentation/images/steps/3.%20Heroku%20Deployment%20Activity%20Summary.png)
@@ -476,11 +509,11 @@ The final version of the website will be deployed to the cloud-based hosting pla
 ![Step Six](/documentation/images/steps/6.%20Heroku%20Eco%20Dyno%20Subscription.png)
 ![Step Seven](/documentation/images/steps/7.%20Full%20Initial%20Deployment%20Commited.png)
 
-Version Control
+**Version Control**
 
 Git will be used for version control, and GitHub will be used to document the development process. Meaningful commit messages will be used to track changes and progress.
 
-## Credits
+# Credits
 
 - Content & design input: Dean Crystal & Lisa J Bull (Doe Corporation)
 - Favicon Icon - <a href="https://www.freepik.com/search">Icon by Freepik</a>
