@@ -134,12 +134,14 @@
 
 
 <h2>Place an Order</h2>
-
+{% if user.is_authenticated %}
 <form method="post" id="bottom">
     {% csrf_token %}
     {{ order_form.as_p }}
     <button type="submit" class="btn btn-primary">Order Now</button>
 </form>
-
+{% else %}
+<p>Please <a href="{% url 'account_login' %}">log in</a> to place an order.</p>
+{% endif %}
 
 {% endblock %}

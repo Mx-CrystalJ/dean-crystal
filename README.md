@@ -3,7 +3,7 @@
 ![Dean Crystal's Website - Project Banner](/documentation/images/assets/SHOP%20NOW.png)
 
 <p align="center">
-	|<a href="https://mx-crystalj.github.io/IP1-The-Mental-Mountain-Hub/" target="blank"> Live Project</a> |
+	|<a href="https://dean-crystal-22c9623daae0.herokuapp.com/" target="blank"> Live Project</a> |
 </p>
 
 This repository contains the code for Dean Crystal's book services, author works and coding website.
@@ -24,16 +24,7 @@ This repository contains the code for Dean Crystal's book services, author works
       - [Imagery](#imagery)
       - [Wireframes](#wireframes)
 * [Features](#features)
-	- [General Features](#general-features)
-    - [Navigation and Carousel Section](#navigation-and-carousel-section)
-    - [Bootstrap Cards](#bootstrap-cards)
-    - [Links and Buttons](#links-and-buttons)
-	- [Responsive Design](#responsive-design)
-* [Built With](#built-with)
-	- [Technology and Languages](#technologies-and-languages)
-		- [Technologies Used](#technologies-used)  
-		- [Libraries and Frameworks](#libraries-and-frameworks)
-	- [Tools & Programs](#tools-and-programs)
+	- [Technologies Used](#technologies-used)  
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
@@ -47,9 +38,11 @@ This website is an online portfolio and platform for Dean Crystal, an author, pu
 
 ## Entity Relationship diagram
 
-
+![ERD](/documentation/images/wireframes/EDR%20Chart.png)
 
 ## Data Model
+
+![Data Model]()
 
 ## Planning
 
@@ -67,21 +60,20 @@ This website is an online portfolio and platform for Dean Crystal, an author, pu
 
 ### Imagery
 
-- Use high-quality images that are relevant to the content.
-- Consider incorporating Dean Crystal's author photo and images related to writing/editing/full-stack.
-- Optimise images for web performance.
+- High-quality images that are relevant to the content.
+- Dean Crystal's author photo and images related to writing/editing/full-stack services.
+- Optimise images for web performance, using png and cloudinary.
 
 ### Layout
 
-- Use a clean and organised layout with clear sections for different content types.
-- Prioritise important information and calls to action.
+- A clean and organised layout or grid with clear sections for different content types.
+- Prioritising important information and calls to action.
 - Consistent spacing and alignment.
 
 ### Navigation
 
 - A clear and intuitive navigation menu.
 - Descriptive labels for menu items.
-- Consider using a sticky header for easy access to navigation.
 
 ## Agile Development
 
@@ -96,11 +88,13 @@ A suitable Agile tool used to:
 - Track progress and identify any roadblocks.
 - Facilitate communication and collaboration.
 
+![Project Board](/documentation/images/wireframes/project_board.png)
+
 **Sprints**
 
 The project will be divided into two-week sprints, each focusing on specific functionalities.
 
-Sprint 1: Project Setup and Core Website Development
+Sprint 1: Project Sestup and Core Website Development
 
 - Project setup: Set up the development environment, initialise the Django project, and configure essential settings.
 - Database design: Design and implement the database schema, including custom models for the writing portfolio, testimonials, and contact requests.
@@ -119,81 +113,6 @@ Sprint 3: Advanced Features and Deployment
 - Deployment: Deploy the website to a cloud-based hosting platform, ensuring proper functionality and security.
 - Documentation: Document the deployment process and update the README file with relevant information.
 
-I. Visual Assets
-
-Profile Pictures:
-
-- [x] Square logo variation.
-- [x] Round logo variation.
-- [x] Logo with text.
-- [x] Logo without text.
-- [ ] Image of a stack of books with Dean Crystal's logo.
-- [ ] Image of a pen and paper with Dean Crystal's logo.
-- [ ] Image of a laptop with a manuscript open and Dean Crystal's logo in the corner.
-
-Cover Images:
-
-- [ ] Image of a bookshelf filled with diverse books.
-- [x] Image of a writer's desk with a laptop, coffee, and a plant.
-- [ ] Quote by Maya Angelou on a visually appealing background: "You can't use up creativity. The more you use, the more you have."
-- [ ] Testimonial from a satisfied client with a professional background: "Dean's editing was invaluable. My manuscript is now polished and ready for publication."
-
-Post Images:
-
-- [ ] High-quality image of a writer's retreat for a blog post about finding writing inspiration.
-- [ ] Infographic with five tips for writing a compelling book introduction.
-- [ ] Image with text overlay: "What's the biggest challenge you face in your writing journey?"
-- [ ] Image of a code editor with a quote by Steve Jobs: "Everybody in this country should learn to program a computer... because it teaches you how to think."
-
-II. Textual Assets
-
-Captions:
-
-- [ ] "Struggling with writer's block? Check out our latest blog post for tips on overcoming it! [link to blog post]"
-- [ ] "What's your favourite writing tool? Share in the comments below! #writingcommunity #amwriting"
-- [ ] "Ready to take your writing to the next level? Book a free consultation today! [link to website]"
-
-Blog Post Excerpts:
-
-- [ ] Share a compelling paragraph from a blog post about the importance of self-editing with a link to the full article.
-
-- [ ] Quotes: Share a quote by Ernest Hemingway: "There is nothing to writing. All you do is sit down at a typewriter and bleed."
-
-- [ ] Testimonials: "Dean's attention to detail is impeccable. They helped me polish my manuscript and gave me the confidence to submit it to publishers." - Dr. Sarah Jones, Author of "The History of..."
-
-- [ ] Hashtags: Research relevant hashtags for each post (e.g., #writingtips, #amwriting, #amediting, #publishing, #indieauthor, #coding, #webdev, #javascript).
-
-III. Platform-Specific Assets
-
-Twitter:
-
-- [ ] Share short writing tips, publishing news, and coding advice.
-- [ ] Engage in conversations with other writers, editors, and developers.
-- [ ] Use relevant hashtags to reach a wider audience.
-
-Instagram:
-
-- [ ] Share visually appealing images and videos related to writing, editing, and publishing.
-- [ ] Use Instagram Stories to share behind-the-scenes content or quick writing tips.
-- [ ] Run a contest or giveaway for a free editing consultation.
-
-Facebook:
-
-- [ ] Create a business page with information about Dean Crystal's services, contact details, and client testimonials.
-- [ ] Share blog posts and updates regularly.
-- [ ] Run Facebook Ads to target audiences interested in writing, editing, or publishing services.
-
-IV. Content Calendar
-
-- [ ] Plan and schedule social media posts in advance.
-- [ ] Use a social media management tool (e.g., Buffer, Hootsuite) to streamline scheduling and posting.
-- [ ] Create a content calendar with promotional, educational, and engaging content.
-
-V. Analytics and Tracking
-
-- [ ] Set up social media analytics tracking for each platform.
-- [ ] Regularly review analytics data to measure engagement, reach, and audience growth.
-- [ ] Use analytics insights to refine your social media strategy and improve your content.
 
 I. Editing and Proofreading
 
@@ -256,12 +175,61 @@ IV. General Promotions
 
 ### User Stories
 
+[Issue #1](https://github.com/Mx-CrystalJ/dean-crystal/issues/1)
 
+[Issue #2](https://github.com/Mx-CrystalJ/dean-crystal/issues/2)
+
+[Issue #3](https://github.com/Mx-CrystalJ/dean-crystal/issues/3)
+
+[Issue #4](https://github.com/Mx-CrystalJ/dean-crystal/issues/4)
+
+[Issue #5](https://github.com/Mx-CrystalJ/dean-crystal/issues/5)
+
+[Issue #6](https://github.com/Mx-CrystalJ/dean-crystal/issues/6)
+
+[Issue #7](https://github.com/Mx-CrystalJ/dean-crystal/issues/7)
+
+[Issue #8](https://github.com/Mx-CrystalJ/dean-crystal/issues/8)
+
+[Issue #9](https://github.com/Mx-CrystalJ/dean-crystal/issues/9)
+
+[Issue #10](https://github.com/Mx-CrystalJ/dean-crystal/issues/10)
+
+[Issue #11](https://github.com/Mx-CrystalJ/dean-crystal/issues/11)
+
+[Issue #12](https://github.com/Mx-CrystalJ/dean-crystal/issues/12)
+
+[Issue #13](https://github.com/Mx-CrystalJ/dean-crystal/issues/13)
+
+[Issue #14](https://github.com/Mx-CrystalJ/dean-crystal/issues/14)
+
+[Issue #15](https://github.com/Mx-CrystalJ/dean-crystal/issues/15)
+
+[Issue #16](https://github.com/Mx-CrystalJ/dean-crystal/issues/16)
+
+[Issue #17](https://github.com/Mx-CrystalJ/dean-crystal/issues/17)
+
+[Issue #18](https://github.com/Mx-CrystalJ/dean-crystal/issues/18)
+
+[Issue #19](https://github.com/Mx-CrystalJ/dean-crystal/issues/19)
+
+[Issue #20](https://github.com/Mx-CrystalJ/dean-crystal/issues/20)
+
+[Issue #21](https://github.com/Mx-CrystalJ/dean-crystal/issues/21)
+
+[Issue #22](https://github.com/Mx-CrystalJ/dean-crystal/issues/22)
+
+[Issue #23](https://github.com/Mx-CrystalJ/dean-crystal/issues/23)
+
+[Issue #24](https://github.com/Mx-CrystalJ/dean-crystal/issues/24)
 
 <hr>
 <p align="right"><a href="">Back To Top</a></p>
 
 ### Colors
+
+![Color](/documentation/images/designs/Dean%20Crystal%20Colours.png)
+
 
 While silver isn't explicitly prominent in the logo, as an accent it can complement the existing palette.
 
@@ -287,7 +255,8 @@ For Hover Effects:
 - #C0C0C0 Use a semi-transparent white with a hint of the classic silver  mixed in for a glowing effect.
 
 
-To ensure compliance to standards, the [Colour Contrast Checker](https://colourcontrast.cc/) (also available as extension on [Chrome Web Store](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)) was used.<br>
+To ensure compliance to standards, the [Colour Contrast Checker](https://colourcontrast.cc/) (also available as extension on [Chrome Web Store](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)) was used.
+<br>
 Both the [WebAIM](https://webaim.org/resources/contrastchecker/) and the [Adobe](https://color.adobe.com/create/color-contrast-analyzer) color contrast tools were used to corroborate these results.
 
 ### Main Palette
@@ -312,8 +281,6 @@ Both the [WebAIM](https://webaim.org/resources/contrastchecker/) and the [Adobe]
 ![ColorContrastChecker 12](/documentation/images/testing/color/Colour%20Contrast%20Checker%2012.png)
 ![ColorContrastChecker 13](/documentation/images/testing/color/Colour%20Contrast%20Checker%2013.png)
 
-
-[research](/documentation/research.md).
 
 <hr>
 <p align="right"><a href="#the-mental-mountain-hub">Back To Top</a></p>
@@ -381,9 +348,66 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 - Testimonials page featuring client feedback.
 - Blog with articles and insights related to writing and editing.
 - Contact page with a form and contact details.
-- User authentication for exclusive content or project tracking (future implementation).
+- User authentication for exclusive content or project tracking.
+
+**Navigation**
+
+![Nav Bar](/documentation/images/features/phone_nav.png)
+![Service Page Link](/documentation/images/features/service_button.png)
+![Author Work Button](/documentation/images/features/author_button.png)
+![News Button](/documentation/images/features/news_button.png)
+![Edit & Delete Order Buttons](/documentation/images/features/crud1.png)
+![Order Page Button](/documentation/images/features/order_button.png)
+
+**Footer**
+
+![Footer](/documentation/images/features/phone_footer.png)
+
+**Home page**
+
+![Home](/documentation/images/features/home_page.png)
+
+**Pages**
+
+![About](/documentation/images/features/about_page.png)
+
+![Services](/documentation/images/features/service_page.png)
+
+![Blog](/documentation/images/features/blog_page.png)
+
+![Blog Detail](/documentation/images/features/blog_detail_page.png)
+
+![Contact](/documentation/images/features/contact_page.png)
+
+![Orders](/documentation/images/features/order_page.png)
+
+![Sign In](/documentation/images/features/sign_in_page.png)
+
+![Sign Out](/documentation/images/features/sign_out_page.png)
+
+![Sign Up](/documentation/images/features/sign_up_page.png)
+
+![Terms & Conditions](/documentation/images/features/t&c_page.png)
+
+**CRUD**
+
+![Create](/documentation/images/features/place_order.png)
+
+![Read](/documentation/images/features/order_page.png)
+
+![Update](/documentation/images/features/edit_button.png)
+
+![Delete](/documentation/images/features/delete_button.png)
+
+**Authentication & Authorisation**
+
+![Order Sign In Authentication](/documentation/images/features/order_auth.png)
+
+![Not Logged In](/documentation/images/features/not_logged_in.png)
 
 ## Responsiveness
+
+![Responsiveness](/documentation/images/features/responsive.png)
 
 - Design the website to be fully responsive across all devices.
 - Use CSS media queries to adjust the layout for different screen sizes.
@@ -424,17 +448,16 @@ This includes:
 - Ensuring cross-platform compatibility.
 
 - Manual testing is conducted throughout the development process.
-- Automated testing may be implemented for specific features.
 - Testing focuses on functionality, usability, and responsiveness.
 
-[Research & testing img](/documentation/research/research_testing_img.md).
+[Research & testing images](/documentation/research/research_testing_img.md).
 
 ## Deployment
 
 The final version of the website will be deployed to the cloud-based hosting platform, Heroku.
 
 <p align="center">
-	|<a href="https://mx-crystalj.github.io/IP1-The-Mental-Mountain-Hub/" target="blank"> Heroku Hosted Live Project </a> |
+	|<a href="https://dean-crystal-22c9623daae0.herokuapp.com/" target="blank"> Heroku Hosted Live Project </a> |
 </p>
 
 - Deployment steps are documented for easy replication.
@@ -460,14 +483,15 @@ Git will be used for version control, and GitHub will be used to document the de
 ## Credits
 
 - Content & design input: Dean Crystal & Lisa J Bull (Doe Corporation)
-- [List any third-party libraries or resources used]
 - Favicon Icon - <a href="https://www.freepik.com/search">Icon by Freepik</a>
-- Testimonials – Cristian Taheri
+- Testimonials & Credits
+	- Lisa Bull
+	- Cristian Taheri
 	- Sophie Andrews Tilbury
-	- John
+	- John 
 	- Mark
 	- Mathew
 
 ## License
 
-- [Choose an appropriate license, e.g., MIT License]
+- Code Institute
