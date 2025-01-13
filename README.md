@@ -609,6 +609,7 @@ Git will be used for version control, and GitHub will be used to document the de
 	- John Rearden
 	- Mark Briscoe
 	- Mathew Edwards
+	- Marko Tot
 
 ## License
 
