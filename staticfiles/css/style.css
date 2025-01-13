@@ -11,6 +11,10 @@ body {
     background-color: #F9FAFC;
 }
 
+main {
+    width: 344px;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -22,8 +26,31 @@ body {
     color: #6699cc;
 }
 
-h1, h2, h3, li {
+h1 {
     font-family: 'Playfair Display';
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Playfair Display';
+    text-align: center;
+}
+
+li {
+    font-family: 'Playfair Display';
+    font-size: 20px;
+}
+
+ul {
+    font-family: 'Playfair Display';
+    font-size: 20px;
 }
 
 p {
@@ -53,6 +80,35 @@ tr {
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-header {
+    border-color: #188181;
+    border-width: 10px;
+    background-color: #aaebe3;
+}
+
+.card-body {
+    border-color: #23BBBB;
+    border-width: 10px;
+}
+
+.card-footer {
+    border-color: #23BBBB;
+    border-width: 10px;
+}
+
+.service-img-view {
+    height: 180px;
+    width: 320px;
+}
+
+#id_service_id {
+    width: 344px;
+}
+
+#id_order_description {
+    width: 344px;
 }
 
 .image-container {
@@ -87,13 +143,23 @@ tr {
     width: 100%;
 }
 
+.post-alignent {
+    margin-right: 25px
+}
+
+.img-alignment{
+    margin: 30px;
+}
+
 .mastheadhome {
+    display: flex;
     margin-top: 5px;
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 150px;
-    width: 500px
+    width: 344px;
+    margin: auto
 }
 
 .masthead-text {
@@ -122,9 +188,24 @@ tr {
 }
 
 .container {
-    margin-left: 0%;
-    margin-right: 0%;
-    max-width: 100%;
+    margin: auto;
+    max-width: fit-content;
+}
+
+.container-alignment {
+    
+}
+
+.hide-element {
+    display: none;
+}
+
+.content-center {
+    align-content: center;
+}
+
+.news-img {
+    width: 284px;
 }
 
 .post-link {
@@ -149,11 +230,9 @@ tr {
     color: #022750;
 }
 
-
 img {
     max-width: fit-content;
 }
-
 
 .post-subtitle {
     margin-left: 5%;
@@ -179,7 +258,7 @@ img {
 
 .btn-danger {
     background-color: #4f94dd;
-    border-color: #4f94dd;
+    border-color: #a6d1ff;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -248,3 +327,268 @@ img {
     align-items: center;
 }
 
+.ul-booknews-alignment {
+    list-style-type: none;
+}
+
+.card-page-sizing {
+    width: auto;
+    border-radius: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card-sizing {
+    border-radius: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.responsive-large {
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    main {
+        max-width: 100%;
+        display: contents;
+    }
+
+    .container {
+        margin-left: 0%;
+        margin-right: 0%;
+        max-width: fit-content;
+    }
+
+    .card-page-sizing {
+        width: auto;
+        padding-left: 15px;
+        border-radius: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+    }
+
+    .service-img-view {
+        height: 280px;
+        width: 420px;
+    }
+
+
+
+}
+
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 100%;
+    }
+
+    .hide-element {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        margin-left: 0%;
+        margin-right: 0%;
+        max-width: fit-content;
+    }
+
+    .news-img {
+        width: 520px;
+    }
+
+    .mastheadhome {
+        width: auto;
+    }
+
+    .img-alignment {
+        padding-left: 28px;
+    }
+
+    .ul-booknews-alignment {
+        text-align: center;
+    }
+
+    .news-img {
+        width: 1000px;
+    }
+
+    img {
+        max-width: 700px;
+    }
+
+    .news-buttons { 
+        height: 63.6px;
+        width: 225.6px;
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .responsive-large {
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/* Media query: tablets and larger (1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    ul {
+        font-size: 25px;
+    }
+
+    li {
+        font-size: 25px;
+    }
+
+    .container {
+        margin-left: 0%;
+        margin-right: 0%;
+        max-width: auto;
+    }
+
+    .container1-size {
+        display: flex;
+        width: 1000px;
+        justify-content: center;
+    }
+    
+
+    .news-img {
+        width: 1000px;
+    }
+
+    .mastheadhome {
+        padding-top: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    .post-title {
+        font-size: 25px;
+    }
+
+    .img-alignment {
+        padding: 50px;
+        padding-left: 170px;
+    }
+
+    .carousel-img {
+        height: 500px;
+        width: 500px;
+    }
+
+    .responsive-large {
+        max-width: 550px;
+    }
+    
+    .font-responsive {
+        font-size: 50px;
+    }
+
+}
+
+
+/* Media query: tablets and larger (2000px and up) */
+@media screen and (min-width: 2000px) {
+    
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    ul {
+        font-size: 35px;
+    }
+
+    li {
+        font-size: 35px;
+    }
+    
+    .container1-size {
+        display: flex;
+        width: 800px;
+        justify-content: center;
+    }
+
+
+    .responsive-large {
+        max-width: 1300px;
+        height: 400px;
+    }
+
+    .img-alignment {
+        padding-left: 130px;
+    }
+
+    .post-title {
+        font-size: 35px;
+    }
+
+    .post-subtitle {
+        display: none;
+    }
+
+
+}
+
+/* Media query: tablets and larger (3000px and up) */
+@media screen and (min-width: 3000px) {
+    
+    .img-alignment {
+        align-self: center;
+        padding-left: 100px;
+    }
+}
