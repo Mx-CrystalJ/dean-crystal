@@ -414,7 +414,7 @@ img {
     }
 
     .img-alignment {
-        padding-left: 45px;
+        padding-left: 28px;
     }
 
     .ul-booknews-alignment {
@@ -491,7 +491,7 @@ img {
     
 
     .news-img {
-        width: 520px;
+        width: 1000px;
     }
 
     .mastheadhome {
@@ -505,7 +505,8 @@ img {
     }
 
     .img-alignment {
-    
+        padding: 50px;
+        padding-left: 170px;
     }
 
     .carousel-img {
@@ -514,14 +515,47 @@ img {
     }
 
     .responsive-large {
+        max-width: 550px;
     }
     
+    .font-responsive {
+        font-size: 50px;
+    }
+
 }
 
 
 /* Media query: tablets and larger (2000px and up) */
 @media screen and (min-width: 2000px) {
     
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    ul {
+        font-size: 35px;
+    }
+
+    li {
+        font-size: 35px;
+    }
     
     .container1-size {
         display: flex;
@@ -531,9 +565,30 @@ img {
 
 
     .responsive-large {
-        max-width: 1000px;
-        height: 500px;
+        max-width: 1300px;
+        height: 400px;
+    }
+
+    .img-alignment {
+        padding-left: 130px;
+    }
+
+    .post-title {
+        font-size: 35px;
+    }
+
+    .post-subtitle {
+        display: none;
     }
 
 
+}
+
+/* Media query: tablets and larger (3000px and up) */
+@media screen and (min-width: 3000px) {
+    
+    .img-alignment {
+        align-self: center;
+        padding-left: 100px;
+    }
 }

@@ -13,31 +13,39 @@ This repository contains the code for Dean Crystal's book services, author works
 * [Dean Crystal](#dean-crystal)
 	- [Table of Contents](#TOC)
 	- [Project Description](#project-description)
-* [Project Planning](#project-planning)
-	- [Entity Relationship Diagram](#entity-relationship-diagram)
-	- [Data Model](#data-model)
+	- [Project Planning](#project-planning)
+    - [Imagery](#imagery)
+	- [Layout](#layout)
+	- [Navigation](#navigation)
 	- [Agile Development](#agile-development)
 	- [UX Design](#ux-design)
-      - [User Stories](#user-stories)
-      - [Colors](#colors)
-      - [Typography](#typography)
-      - [Imagery](#imagery)
-      - [Wireframes](#wireframes)
+	- [User Stories](#user-stories)
+    - [Colors](#colors)
+	- [Main Palette](#main-palette)
+    - [Typography](#typography)
+	- [Wireframes](#wireframes)
 * [Features](#features)
+	- [Responsivness](#responsiveness)
+	- [Accessibility](#accessibility)
 	- [Technologies Used](#technologies-used)  
 * [Testing](#testing)
+	- [Manual Testing User Stories](#manual-testing-user-stories)
+	- [Manual Testing Features](#manual-testing-features)
 	- [Bugs](#bugs)
+	- [Browser Compatibility](#browser-compatibility)
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [License](#license)
 
 ## Project Description
 
-This website is an online portfolio and platform for Dean Crystal, an author, publisher and full-stack web developer. It showcases their services, expertise, and portfolio, allowing potential clients to learn more and get in touch.
+This website is an online portfolio and platform for Dean Crystal, an author, publisher and full-stack web developer. It showcases their services, expertise, and portfolio, allowing potential clients to learn more, get in touch, and place an order.
 
-# Project Planning
+## Project Planning
 
 **Entity Relationship diagram**
+
+Model table with the green text are the model that will be fond within the project. Those models with black font are for future developments in the website.
 
 ![ERD](/documentation/images/wireframes/EDR%20Chart.png)
 
@@ -51,19 +59,19 @@ This website is an online portfolio and platform for Dean Crystal, an author, pu
 - Facilitate acquisition of new clients.
 - Develop and deploy a functional and user-friendly website using the Django framework.
 
-### Imagery
+## Imagery
 
 - High-quality images that are relevant to the content.
 - Dean Crystal's author photo and images related to writing/editing/full-stack services.
 - Optimise images for web performance, using png and cloudinary.
 
-### Layout
+## Layout
 
 - A clean and organised layout or grid with clear sections for different content types.
 - Prioritising important information and calls to action.
 - Consistent spacing and alignment.
 
-### Navigation
+## Navigation
 
 - A clear and intuitive navigation menu.
 - Descriptive labels for menu items.
@@ -217,7 +225,7 @@ IV. General Promotions
 [Issue #24](https://github.com/Mx-CrystalJ/dean-crystal/issues/24)
 
 <hr>
-<p align="right"><a href="">Back To Top</a></p>
+<p align="right"><a href="dean-crystal">Back To Top</a></p>
 
 ### Colors
 
@@ -252,7 +260,7 @@ To ensure compliance to standards, the [Colour Contrast Checker](https://colourc
 <br>
 Both the [WebAIM](https://webaim.org/resources/contrastchecker/) and the [Adobe](https://color.adobe.com/create/color-contrast-analyzer) color contrast tools were used to corroborate these results.
 
-### Main Palette
+#### Main Palette
 
 - Primary: Dark blue (#003366)
 - Secondary: Light blue (#6699cc), Light gray (#e6e6e6)
@@ -275,8 +283,7 @@ Both the [WebAIM](https://webaim.org/resources/contrastchecker/) and the [Adobe]
 ![ColorContrastChecker 13](/documentation/images/testing/color/Colour%20Contrast%20Checker%2013.png)
 
 
-<hr>
-<p align="right"><a href="#the-mental-mountain-hub">Back To Top</a></p>
+<p align="right"><a href="#dean-crystal">Back To Top</a></p>
 
 ### Typography
 
@@ -299,8 +306,8 @@ Both the [WebAIM](https://webaim.org/resources/contrastchecker/) and the [Adobe]
 - PT Serif: A transitional serif font with a classic feel. It offers good readability and pairs well with sans-serif headings.
 [https://fonts.google.com/specimen/PT+Serif?preview.text=Dean%20Crystal]
 
-<hr>
-<p align="right"><a href="#the-mental-mountain-hub">Back To Top</a></p>
+
+<p align="right"><a href="#dean-crystal">Back To Top</a></p>
 
 ### Wireframes
 
@@ -331,9 +338,9 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 ![Contact](/documentation/images/designs/Contact.png)
 
 <hr>
-<p align="right"><a href="">Back To Top</a></p>
+<p align="right"><a href="#dean-crystal">Back To Top</a></p>
 
-# Features
+## Features
 
 - Homepage with an introduction, call to action, and recent blog posts.
 - About page detailing Dean Crystal's background and qualifications.
@@ -358,7 +365,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 
 **Home page**
 
-![Home](/documentation/images/features/home_page.png)
+![Home](/documentation/images/features/desktop-laptop.png)
 
 **Pages**
 
@@ -406,13 +413,13 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 - Use CSS media queries to adjust the layout for different screen sizes.
 - Test the responsiveness on various devices and browsers.
 
-### Accessibility
+## Accessibility
 
 - Adhere to WCAG guidelines for accessibility.
 - Ensure sufficient color contrast, keyboard navigation, and alternative text for images.
 - Use semantic HTML for proper structure and meaning.
 
-# Technologies Used
+## Technologies Used
 
 - Django
 - Python
@@ -426,7 +433,9 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) to highlig
 - Figma (for design mockups)
 - Gemini: No Code was taken from AI.
 
-# Testing
+<p align="right"><a href="#dean-crystal">Back To Top</a></p>
+
+## Testing
 
 Coding Standards
 
@@ -439,7 +448,6 @@ This includes:
 - Using meaningful variable and function names.
 - Implementing proper indentation and spacing.
 - Ensuring cross-platform compatibility.
-
 - Manual testing is conducted throughout the development process.
 - Testing focuses on functionality, usability, and responsiveness.
 
@@ -451,67 +459,78 @@ This includes:
 User Story |  Test | Pass
 --- | --- | :---:
 As a Site User I can understand Dean Crystal's offerings quickly so that I can decide if they're the right editor for me. | Carousels with services, link to services, and a section that explaines the type of service offered. | &check;
-[Home Page](/documentation/images/features/home_page.png).
-As a Site User, I can easily access the blog or recent testimonials so that I can stay updated on Dean Crystal's work. | A view of the current blog posts | &check;
-[Home Page](/documentation/images/features/home_page.png).
-As a Site User, I can see clear contact information and calls to action so that I can inquire about services. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/call_to_action.png).
-As a Site User, I can learn about Dean Crystal's background and experience so that I can assess their expertise. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/about_page.png).
-As a Site User, I can understand Dean Crystal's writing journey so that I can connect with them on a personal level. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/about_page.png.)
-As a Site User, I can see a clear breakdown of services and pricing so that I can make an informed decision. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/service_card.png).
-As a Site User, I can read detailed testimonials so that I can see what past clients say about Dean Crystal's work. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/testimonials_section.png).
-As a Site User, I can comment on blog posts so that I can engage with the author and other readers. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/blog_detail_page.png).
-As a Site User, I can have multiple ways to contact Dean Crystal so that I can choose the most convenient method. | Contact page for direct requests, social media in footer | &check;
-[Home Page](/documentation/images/features/contact_page_socials.png). 
-As a Site User, I can see a clear confirmation message after submitting the contact form so that I know my inquiry has been received. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/contact_approval.png).
-As a Site User, I can create an account so that I can access exclusive content or track my orders. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/sign_up_page.png).
-As a Site User, I can find a secure and straightforward login/registration process so that I can access my account effortlessly. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/sign_in_page.png).
-As a Site Admin, I can add, edit, and delete website content so that I can keep the site updated. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/admin_summernote.png).
-As a Site Admin, I can manage user accounts so that I can control access to restricted content. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/user_admin.png).
-As a Site Admin I can create, edit, and delete blog posts so that I can maintain an active blog. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/blog_admin_summernote.png).
+[Home Page](/documentation/images/features/desktop-laptop.png).
+As a Site User, I can easily access the blog or recent testimonials so that I can stay updated on Dean Crystal's work. | A view of the current blog posts which are clickable to the blog page. | &check;
+[Home Page](/documentation/images/features/desktop-laptop.png).
+As a Site User, I can see clear contact information and calls to action so that I can inquire about services. | Orde now buttons can be clikced and sent to services page, social media accounts are placed in the footer. | &check;
+[Call to Action](/documentation/images/features/call_to_action.png).
+As a Site User, I can learn about Dean Crystal's background and experience so that I can assess their expertise. | Dean Crystal's logo is visible with the writing that show background, ect. | &check;
+[About Page](/documentation/images/features/about_page.png).
+As a Site User, I can understand Dean Crystal's writing journey so that I can connect with them on a personal level. | Extra detail in the about me of the previous works, ect. | &check;
+[About Page](/documentation/images/features/about_page.png.)
+As a Site User, I can see a clear breakdown of services and pricing so that I can make an informed decision. | Call-to-actions are under each service breakdown and lead to the service page where all services acan be seen in cards each with its own order button, pricing and word count, buttons lead to the bottom of the page. | &check;
+[Service Cards](/documentation/images/features/service_card.png).
+As a Site User, I can read detailed testimonials so that I can see what past clients say about Dean Crystal's work. | Third image on the right carousellinks to the bottom of the page which is where the user can read all tesimonials with account usernames as the testimonial name. | &check;
+[Testimonials](/documentation/images/features/testimonials_section.png).
+As a Site User, I can comment on blog posts so that I can engage with the author and other readers. | Comment box available at the bottom right when logged in, comment sent for approval and shown faded on the left. | &check;
+[Blog Post Page](/documentation/images/features/blog_detail_page.png).
+As a Site User, I can have multiple ways to contact Dean Crystal so that I can choose the most convenient method. | Contact page for direct requests, social media in footer. | &check;
+[Contact Page](/documentation/images/features/contact_page_socials.png). 
+As a Site User, I can see a clear confirmation message after submitting the contact form so that I know my inquiry has been received. | The user is directed to the home page and confirmation box appears in green at the top of the page. | &check;
+[Contact Approval](/documentation/images/features/contact_approval.png).
+As a Site User, I can create an account so that I can access exclusive content or track my orders. | "Sign in" link in the navigation when clicked the "Sign up" link appears above the sign in fields and the user is sent to fill out the registration form. | &check;
+[Sign-up Page](/documentation/images/features/sign_up_page.png).
+As a Site User, I can find a secure and straightforward login/registration process so that I can access my account effortlessly. | "Login" link in the navigation and not signed in sentence is on the top right. The "Login" link when clicked shows the page to enter login credentials. | &check;
+[Sign-in Page](/documentation/images/features/sign_in_page.png).
+As a Site Admin, I can add, edit, and delete website content so that I can keep the site updated. | Django admin panel with content editing tools. Super user logs in to the admin panel, navigates to the relevant section, and uses the provided tools to add, edit, or delete content. | &check;
+[Admin Page](/documentation/images/features/admin_summernote.png).
+As a Site Admin, I can manage user accounts so that I can control access to restricted content. | User management section in the Django admin panel. When super user logs in to the admin panel, navigates to the user management section, and uses the provided tools to manage user accounts and permissions such as changing to a staff account. | &check;
+[User Admin Page](/documentation/images/features/user_admin.png).
+As a Site Admin I can create, edit, and delete blog posts so that I can maintain an active blog. | Blog post management section in the Django admin panel. When logged in to the admin panel, admin can navigate to the blog post management section and use the provided tools to create, edit, or delete blog posts. | &check;
+[Blog Admin Page](/documentation/images/features/blog_admin_summernote.png).
 As a Site Admin, I can moderate comments on blog posts so that I can ensure a positive community space. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/comment_appoval_admin.png).
+[Comment Admin Page](/documentation/images/features/comment_appoval_admin.png).
 As a Site Admin, I can track client interactions and order details so that I can manage my workload efficiently. | what is visible to the user and what action they should perform | &check;
-[Home Page](/documentation/images/features/order_tracking_admin.png).
+[Order Page](/documentation/images/features/order_tracking_admin.png).
 
 ### Manual Testing features
 
-Test all your features, you can use the same approach.
-
-| Feature | Action | Status | 
+| Feature | Action | Status |
 |:-------:|:--------| :--------|
-| description | user steps | &check; |
-attach screenshot
+| Sign Up | When asked to sign in there is a link above to sign up. | &check; |
+[Sign-up](/documentation/images/features/sign-up.png).
+| Sign In | Shown in navbar when not loggin in. | &check; |
+[Sign-in](/documentation/images/features/sign_in.png).
+| Sign Out | Shown in navbar when loggin in, confirmation to sign out given. | &check; |
+[Sign-out](/documentation/images/features/sign_out.png).
+| Order | On service page User is able to scroll through services and click the order now button to be taken to the bottom of the page which reveals an order form if authorised as an account user. | &check; |
+[Order](/documentation/images/features/order_approval.png).
+| Order Edit | On order page User is able to scroll (if applicable) and click the edit button. | &check; |
+[Order Edit](/documentation/images/features/order_edit.png).
+| Order Delete | On order page User is able to scroll (if applicable) and click the delete button. | &check; |
+[Order Delete](/documentation/images/features/order_delete.png).
+| Contact | When contact form is filled out it is submitted for approval. | &check; |
+[Contact](/documentation/images/features/contact_approval.png).
+| Carousels | Carousel images are linked to services page and testimonials. | &check; |
+[Carousels](/documentation/images/features/desktop-laptop.png).
+
+
 
 ## Bugs
 
 1. Placing an order as a general site user: Restriction places using an if else statement in the home.html.
-2. Carousel spacing & sizing issues: 
-3. Order page too long on larger devices: 
-4. 
-5. 
+2. Carousel spacing & sizing issues: Change max-width for several media wqueries.
+3. Nav & Footer too short on mobile view: I changed the sizes of other elements and havnt been avle to fix the issue however it isn't detremtantal to running the site and does not happen on the tablet or desktop view.
 
 
 ## Browser Compatibility
 
 **Google's Lighthouse Performance**
-Screenshots of certain pages and scores (mobile and desktop)
 
-[Home Page](/documentation/images/features/order_tracking_admin.png).
 
-**Browser Compatibility**
-Check compatability with different browsers
+[Home Page](/documentation/images/features/desktop-laptop.png).
+
+[Research & testing images](/documentation/research/research_testing_img.md).
 
 ## Deployment
 
@@ -576,6 +595,7 @@ Please note that when deploying manually you will have to deploy after each chan
 ![Step Seven](/documentation/images/steps/7.%20Full%20Initial%20Deployment%20Commited.png)
 
 **Version Control**
+
 Git will be used for version control, and GitHub will be used to document the development process. Meaningful commit messages will be used to track changes and progress.
 
 ## Credits
@@ -586,10 +606,14 @@ Git will be used for version control, and GitHub will be used to document the de
 	- Lisa Bull
 	- Cristian Taheri
 	- Sophie Andrews Tilbury
-	- John 
-	- Mark
-	- Mathew
+	- John Rearden
+	- Mark Briscoe
+	- Mathew Edwards
 
 ## License
 
 - Code Institute
+- Balsamic
+- Canva Pro
+
+<p align="right"><a href="#dean-crystal">Back To Top</a></p>

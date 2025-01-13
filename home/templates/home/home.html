@@ -54,7 +54,7 @@
             </a>
           </div>
           <div class="carousel-item">
-            <a href="{% url 'services' %}" target="_blank">
+            <a href="#bottom">
               <img class="responsive-large" src="{% static 'images/carrousel_testimoniala.png' %}" class="d-block w-100" alt="...">
             </a>
           </div>
@@ -423,7 +423,7 @@
 
 <h1>Testimonials</h1>
 
-<div class="container">
+<div id="bottom" class="container font-responsive">
   <div class="row">
     <div class="col-sm">
       {% for testimonial in testimonials %}

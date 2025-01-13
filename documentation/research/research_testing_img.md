@@ -61,3 +61,27 @@
 - ![Django Validator](/documentation/images/testing/validators/django_validator.png).
 
 - ![CCS Validator](/documentation/images/testing/validators/css_validator.png).
+
+- ![Desktop 1](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_1.png).
+
+- ![Desktop 2](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_2.png).
+
+- ![Desktop 3](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_3.png).
+
+- ![Desktop 4](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_4.png).
+
+- ![Desktop 5](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_5.png).
+
+- ![Desktop 6](/documentation/images/testing/validators/PageSpeed%20Insights%20Desktop_Page_6.png).
+
+- ![Mobile 1](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_1.png).
+
+- ![Mobile 2](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_2.png).
+
+- ![Mobile 3](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_3.png).
+
+- ![Mobile 4](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_4.png).
+
+- ![Mobile 5](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_5.png).
+
+- ![Mobile 6](/documentation/images/testing/validators/PageSpeed%20Insights%20Mobile_Page_6.png).
