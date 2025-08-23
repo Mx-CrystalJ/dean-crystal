@@ -1,69 +1,124 @@
-{% extends 'base.html' %}
-{% load static %}
-{% load crispy_forms_tags %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %} 
 {% block content %}
-
 
 <div class="container">
   <div class="row container-alignment">
     <!--Carousel 1 Start-->
     <div class="col container1-size">
-      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-ride="carousel"
+      >
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="20000">
             <a href="{% url 'services' %}" target="_blank">
-              <img class="responsive-large" src="{% static 'images/carrousel_creative_editing.png' %}" class="d-block w-100" alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_creative_editing.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
           <div class="carousel-item" data-interval="2000">
             <a href="{% url 'services' %}" target="_blank">
-              <img class="responsive-large" src="{% static 'images/carrousel_academic_proofreading_consultation.png' %}" class="d-block w-100"
-                alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_academic_proofreading_consultation.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
           <div class="carousel-item">
             <a href="{% url 'services' %}" target="_blank">
-              <img class="responsive-large" src="{% static 'images/carrousel_book_formatting.png' %}" class="d-block w-100" alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_book_formatting.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-
       </div>
     </div>
     <!--Carousel 1 End-->
     <!--Carousel 2 Start-->
     <div class="col hide-element">
-      <div id="carouselExampleInterval1" class="carousel slide" data-ride="carousel1">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-ride="carousel"
+      >
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="20000">
             <a href="{% url 'services' %}" target="_blank">
-              <img class="responsive-large" src="{% static 'images/carrousel_web_development.png' %}" class="d-block w-100" alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_web_development.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
           <div class="carousel-item" data-interval="2000">
             <a href="{% url 'services' %}" target="_blank">
-              <img class="responsive-large" src="{% static 'images/carrousel_general_promotions.png' %}" class="d-block w-100" alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_general_promotions.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
           <div class="carousel-item">
             <a href="#bottom">
-              <img class="responsive-large" src="{% static 'images/carrousel_testimoniala.png' %}" class="d-block w-100" alt="...">
+              <img
+                class="responsive-large"
+                src="{% static 'images/carrousel_testimoniala.png' %}"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleInterval1" role="button" data-slide="prev">
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleInterval1" role="button" data-slide="next">
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -71,10 +126,50 @@
     </div>
     <!--Carousel 2 End-->
   </div>
-  <hr>
+  <hr />
+  <!--Start Page Nav-->
+  <div>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#blog">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#authorsworks">Author's Works</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#services"
+          role="button">Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#newsletter">Newsletter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#booknews">Book & Coding News</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#testimonials"
+          tabindex="-1"
+          aria-disabled="true"
+          >Testimonials</a
+        >
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <!--/End Page Nav-->
   <div class="row">
     <!--Blog Post Start-->
-    <div class="col">
+    <div id="blog" class="col">
       {% for post in posts %}
       <div class="mastheadhome">
         <div class="container">
@@ -83,43 +178,56 @@
               <a href="/blog">
                 <h1 class="post-title">{{ post.title }}</h1>
               </a>
-              <p class="post-subtitle">{{ post.author.username }} | {{ post.date_published }}</p>
+              <p class="post-subtitle">
+                {{ post.author.username }} | {{ post.date_published }}
+              </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-              <img src="{% static 'images/book_blog_post.png' %}" class="scale" alt="placeholder">
+              <img
+                src="{% static 'images/book_blog_post.png' %}"
+                class="scale"
+                alt="placeholder"
+              />
             </div>
           </div>
         </div>
       </div>
       {% endfor %}
 
-      <hr>
+      <hr />
 
-
-      <h1>Author's Works</h1>
+      <h1 id="authorsworks">Author's Works</h1>
 
       {% for work in authors_works %}
       <div class="work">
         {% if work.img %}
-        <img class="img-alignment" src="{{ work.img.url }}" alt="{{ work.title }} image">
+        <img
+          class="img-alignment"
+          src="{{ work.img.url }}"
+          alt="{{ work.title }} image"
+        />
         {% endif %}
         <h2>{{ work.title }} | {{ work.author_name }}</h2>
-        <p>{{ work.work_description | safe }} </p>
+        <p>{{ work.work_description | safe }}</p>
         {% if work.work_url %}
-        <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank">View Work</a>
+        <a href="{{ work.work_url }}" class="btn btn-primary" target="_blank"
+          >View Work</a
+        >
         {% endif %}
       </div>
       {% endfor %}
-      <hr>
-
+      <hr />
     </div>
     <!--Blog Post End-->
     <!--Website Content Start-->
     <div class="col">
       <!--Services Hint Section-->
-      <h1>What Services Are on Offer?</h1>
+      <h1 id="services">What Services Are on Offer?</h1>
 
-      <p>I provide a range of services that can be tailored to your needs, including:</p>
+      <p>
+        I provide a range of services that can be tailored to your needs,
+        including:
+      </p>
       <h2>Editorial Services</h2>
       <ul>
         <li>Manuscript Critiques</li>
@@ -128,25 +236,25 @@
         <li>Proofreading</li>
       </ul>
 
-      <br>
+      <br />
 
       <h3>Editing and Proofreading Process</h3>
-
 
       <ol>
         <li>
           Inquiry and Consultation:
           <ul>
             <li>
-              A response to the inquiry, requesting the manuscript or document for review.
+              A response to the inquiry, requesting the manuscript or document
+              for review.
             </li>
             <li>
-              A free preliminary reading and consultation to assess needs and discuss the scope of
-              the project.
+              A free preliminary reading and consultation to assess needs and
+              discuss the scope of the project.
             </li>
             <li>
-              A personalised quote is provided based on the type of editing required, word count, and any specific
-              requests.
+              A personalised quote is provided based on the type of editing
+              required, word count, and any specific requests.
             </li>
           </ul>
         </li>
@@ -154,10 +262,12 @@
           Project Agreement and Payment:
           <ul>
             <li>
-              Agreement to the terms and conditions and makes the payment (or arranges a payment plan).
+              Agreement to the terms and conditions and makes the payment (or
+              arranges a payment plan).
             </li>
             <li>
-              A timeline is established, with clear deadlines for each stage of the process.
+              A timeline is established, with clear deadlines for each stage of
+              the process.
             </li>
           </ul>
         </li>
@@ -165,12 +275,12 @@
           Editing and Feedback:
           <ul>
             <li>
-              The agreed-upon editing services (e.g., developmental editing, copyediting, proofreading) are completed.
+              The agreed-upon editing services (e.g., developmental editing,
+              copyediting, proofreading) are completed.
             </li>
             <li>
-              The edited manuscript is returned to the client with clear and constructive feedback, using track
-              changes and
-              comments.
+              The edited manuscript is returned to the client with clear and
+              constructive feedback, using track changes and comments.
             </li>
           </ul>
         </li>
@@ -178,13 +288,16 @@
           Revisions and Finalisation:
           <ul>
             <li>
-              The client reviews the edited manuscript and provides feedback or requests revisions.
+              The client reviews the edited manuscript and provides feedback or
+              requests revisions.
             </li>
             <li>
-              Feedback is addressed and a revised version of the manuscript is provided.
+              Feedback is addressed and a revised version of the manuscript is
+              provided.
             </li>
             <li>
-              Process may be repeated until the client is satisfied with the final product.
+              Process may be repeated until the client is satisfied with the
+              final product.
             </li>
           </ul>
         </li>
@@ -192,17 +305,21 @@
           Final Delivery:
           <ul>
             <li>
-              The final manuscript is delivered in the requested format (e.g., Word document, PDF).
+              The final manuscript is delivered in the requested format (e.g.,
+              Word document, PDF).
             </li>
             <li>
-              Dean Crystal provides ongoing support and answers any questions a client may have.
+              Dean Crystal provides ongoing support and answers any questions a
+              client may have.
             </li>
           </ul>
         </li>
       </ol>
 
-      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
-      <hr>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank"
+        >Order Now!</a
+      >
+      <hr />
 
       <h2>Formatting</h2>
       <ul>
@@ -210,7 +327,7 @@
         <li>Print Formatting</li>
         <li>Typesetting</li>
       </ul>
-      <br>
+      <br />
       <h3>Book Formatting Process</h3>
 
       <ol>
@@ -218,17 +335,17 @@
           Inquiry and Consultation:
           <ul>
             <li>
-              Dean Crystal responds to the inquiry, requesting the manuscript and any relevant details (e.g., trim
-              size,
-              desired format).
+              Dean Crystal responds to the inquiry, requesting the manuscript
+              and any relevant details (e.g., trim size, desired format).
             </li>
             <li>
-              A consultation is conducted to discuss the client's formatting preferences and goals.
+              A consultation is conducted to discuss the client's formatting
+              preferences and goals.
             </li>
             <li>
-              A personalized quote is provided based on the complexity of the formatting and any additional services
-              required
-              (e.g., typesetting, cover design).
+              A personalized quote is provided based on the complexity of the
+              formatting and any additional services required (e.g.,
+              typesetting, cover design).
             </li>
           </ul>
         </li>
@@ -236,11 +353,12 @@
           Project Agreement and Payment:
           <ul>
             <li>
-              The client agrees to the terms and conditions and makes the payment (or arranges a payment plan).
+              The client agrees to the terms and conditions and makes the
+              payment (or arranges a payment plan).
             </li>
             <li>
-              A timeline for the project is established, with clear deadlines for each stage of the formatting
-              process.
+              A timeline for the project is established, with clear deadlines
+              for each stage of the formatting process.
             </li>
           </ul>
         </li>
@@ -248,10 +366,12 @@
           Formatting and Proofing:
           <ul>
             <li>
-              Dean Crystal formats the manuscript according to industry standards and the client's preferences.
+              Dean Crystal formats the manuscript according to industry
+              standards and the client's preferences.
             </li>
             <li>
-              A proof copy is generated and reviewed for any errors or inconsistencies.
+              A proof copy is generated and reviewed for any errors or
+              inconsistencies.
             </li>
           </ul>
         </li>
@@ -259,13 +379,16 @@
           Client Review and Revisions:
           <ul>
             <li>
-              The client reviews the proof copy and provides feedback or requests revisions.
+              The client reviews the proof copy and provides feedback or
+              requests revisions.
             </li>
             <li>
-              Dean Crystal addresses the client's feedback and provides a revised version of the formatted manuscript.
+              Dean Crystal addresses the client's feedback and provides a
+              revised version of the formatted manuscript.
             </li>
             <li>
-              This process may be repeated until the client is satisfied with the final product.
+              This process may be repeated until the client is satisfied with
+              the final product.
             </li>
           </ul>
         </li>
@@ -273,40 +396,44 @@
           Final Delivery:
           <ul>
             <li>
-              The final formatted files are delivered to the client in the requested formats (e.g., .mobi for Kindle,
-              .epub
-              for other ebook readers, PDF for print).
+              The final formatted files are delivered to the client in the
+              requested formats (e.g., .mobi for Kindle, .epub for other ebook
+              readers, PDF for print).
             </li>
             <li>
-              Dean Crystal provides guidance on publishing and distribution options.
+              Dean Crystal provides guidance on publishing and distribution
+              options.
             </li>
           </ul>
         </li>
       </ol>
-      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
-      <hr>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank"
+        >Order Now!</a
+      >
+      <hr />
 
       <h2>Web Development</h2>
       <ul>
         <li>Website Design and Development</li>
         <li>Content Management Systems</li>
       </ul>
-      <br>
+      <br />
       <h3>Full-Stack Web Development Process</h3>
       <ol>
         <li>
           Inquiry and Consultation:
           <ul>
             <li>
-              Dean Crystal responds to the inquiry, requesting details about the project (e.g., website type,
-              features, design
-              preferences).
+              Dean Crystal responds to the inquiry, requesting details about the
+              project (e.g., website type, features, design preferences).
             </li>
             <li>
-              A consultation is conducted to discuss the client's needs, goals, and budget.
+              A consultation is conducted to discuss the client's needs, goals,
+              and budget.
             </li>
             <li>
-              A detailed proposal is provided outlining the project scope, timeline, and cost.
+              A detailed proposal is provided outlining the project scope,
+              timeline, and cost.
             </li>
           </ul>
         </li>
@@ -314,10 +441,12 @@
           Project Agreement and Payment:
           <ul>
             <li>
-              The client agrees to the proposal and makes the payment (or arranges a payment plan).
+              The client agrees to the proposal and makes the payment (or
+              arranges a payment plan).
             </li>
             <li>
-              A contract is signed outlining the project deliverables and timelines.
+              A contract is signed outlining the project deliverables and
+              timelines.
             </li>
           </ul>
         </li>
@@ -325,13 +454,13 @@
           Design and Development:
           <ul>
             <li>
-              Dean Crystal creates wireframes and mockups to visualize the website's structure and design.
+              Dean Crystal creates wireframes and mockups to visualize the
+              website's structure and design.
             </li>
+            <li>The client provides feedback and approves the design.</li>
             <li>
-              The client provides feedback and approves the design.
-            </li>
-            <li>
-              The website is developed using the agreed-upon technologies (e.g., Django, HTML, CSS, JavaScript).
+              The website is developed using the agreed-upon technologies (e.g.,
+              Django, HTML, CSS, JavaScript).
             </li>
             <li>
               Regular updates and progress reports are provided to the client.
@@ -342,14 +471,15 @@
           Testing and Deployment:
           <ul>
             <li>
-              The website is thoroughly tested on various devices and browsers to ensure functionality and
-              responsiveness.
+              The website is thoroughly tested on various devices and browsers
+              to ensure functionality and responsiveness.
             </li>
             <li>
               The client reviews and approves the final version of the website.
             </li>
             <li>
-              The website is deployed to a hosting platform (e.g., Heroku, PythonAnywhere).
+              The website is deployed to a hosting platform (e.g., Heroku,
+              PythonAnywhere).
             </li>
           </ul>
         </li>
@@ -357,71 +487,85 @@
           Maintenance and Support:
           <ul>
             <li>
-              Ongoing maintenance and support are provided as needed, including bug fixes, updates, and security
-              patches.
+              Ongoing maintenance and support are provided as needed, including
+              bug fixes, updates, and security patches.
             </li>
             <li>
-              Dean Crystal offers training and documentation to help the client manage their website
+              Dean Crystal offers training and documentation to help the client
+              manage their website
             </li>
           </ul>
         </li>
       </ol>
-      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank"
+        >Order Now!</a
+      >
 
-      <hr>
+      <hr />
 
-      <p>Want to know more? Head over to Dean Crystal's
-        <a href="https://8000-mxcrystalj-deancrystal-c7gck3irdrq.ws.codeinstitute-ide.net./services/">Services Page</a>
+      <p>
+        Want to know more? Head over to Dean Crystal's
+        <a
+          href="https://8000-mxcrystalj-deancrystal-c7gck3irdrq.ws.codeinstitute-ide.net./services/"
+          >Services Page</a
+        >
         to see how they can help you to hit your goals.
       </p>
 
-      <br>
+      <br />
 
-      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank">Order Now!</a>
+      <a href="{% url 'services' %}" class="btn btn-primary" target="_blank"
+        >Order Now!</a
+      >
 
-      <hr>
-
-
+      <hr />
     </div>
     <!--Services Content End-->
     <!--Newsletter & Bookfeed Start-->
     <div class="col">
-      <h1>Newsletter</h1>
+      <h1 id="newsletter">Newsletter</h1>
       <h2>Ready to Get Regular Updates?</h2>
 
-      <p>Sign up for my newsletter to stay updated on the latest blog posts, service offerings, and exclusive tips for
-        writers and developers.</p>
+      <p>
+        Sign up for my newsletter to stay updated on the latest blog posts,
+        service offerings, and exclusive tips for writers and developers.
+      </p>
 
       <form method="POST">
-        {% csrf_token %}
-        {{ newsletter_form.as_p }}
+        {% csrf_token %} {{ newsletter_form.as_p }}
         <p><a href="{% url 'terms_conditions' %}">Read T&C Here!</a></p>
         <button class="btn btn-primary" type="submit">Subscribe</button>
       </form>
 
-      <hr>
+      <hr />
 
-      <h2>Book & Coding News</h2>
+      <h2 id="booknews">Book & Coding News</h2>
       <ul class="ul-booknews-alignment">
         {% for news_item in book_news %}
-        <li><img class="news-img" src="{{ news_item.img.url }}" alt="{{ news_item.title }} logo image">
-          <a href="{{ news_item.link }}" class="btn btn-primary btn-center news-buttons"
-            target="_blank">{{ news_item.title }}</a>
+        <li>
+          <img
+            class="news-img"
+            src="{{ news_item.img.url }}"
+            alt="{{ news_item.title }} logo image"
+          />
+          <a
+            href="{{ news_item.link }}"
+            class="btn btn-primary btn-center news-buttons"
+            target="_blank"
+            >{{ news_item.title }}</a
+          >
         </li>
         {% endfor %}
       </ul>
 
       <!--Newsletter & Bookfeed End-->
-
-
     </div>
-
   </div>
 </div>
 
-<hr>
+<hr />
 
-<h1>Testimonials</h1>
+<h1 id="testimonials">Testimonials</h1>
 
 <div id="bottom" class="container font-responsive">
   <div class="row">
@@ -435,6 +579,5 @@
     </div>
   </div>
 </div>
-
 
 {% endblock %}

@@ -8,7 +8,7 @@
 
 
 body {
-    background-color: #F9FAFC;
+    background-color: #c8d6f1;
 }
 
 main {
@@ -23,7 +23,7 @@ main {
 }
 
 .blue-letter {
-    color: #6699cc;
+    color: #2A67A3;
 }
 
 h1 {
@@ -125,7 +125,7 @@ tr {
 
 .scale {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .author {
@@ -163,7 +163,7 @@ tr {
 }
 
 .masthead-text {
-    background-color: #5597de;
+    background: linear-gradient(135deg, #A1EBFF, #2A67A3);
     color: white;
     position: relative;
 }
@@ -180,7 +180,6 @@ tr {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #5597de;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -236,22 +235,24 @@ img {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: rgb(0, 0, 0);
 }
 
 .btn-primary {
     border-radius: 10px;
+    background: linear-gradient(135deg, #A1EBFF, #2A67A3);
+    color: #000000;
 }
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background: linear-gradient(135deg, #A1EBFF, #2A67A3);
+    color: #000000;
 }
 
 .btn-secondary {
-    background-color: black;
-    color: #ffffff;
+    background: linear-gradient(135deg, #A1EBFF, #2A67A3);
+    color: #000000;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -266,7 +267,7 @@ img {
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
+    background-color: (135deg, #A1EBFF, #2A67A3);
     color: #23BBBB;
 }
 
@@ -422,7 +423,7 @@ img {
     }
 
     .news-img {
-        width: 1000px;
+        width: 400px;
     }
 
     img {
@@ -439,10 +440,11 @@ img {
 
 
     .responsive-large {
-        max-width: 600px;
         display: flex;
+        max-width: 480px;
         align-items: center;
     }
+
 }
 
 
@@ -486,12 +488,13 @@ img {
     .container1-size {
         display: flex;
         width: 1000px;
+        height: 250px;
         justify-content: center;
     }
     
 
     .news-img {
-        width: 1000px;
+        width: 400px;
     }
 
     .mastheadhome {
@@ -515,7 +518,8 @@ img {
     }
 
     .responsive-large {
-        max-width: 550px;
+        max-width: 1000px;
+        height: 250px;
     }
     
     .font-responsive {
